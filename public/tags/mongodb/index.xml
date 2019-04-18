@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mongodb on 狂人居</title>
+    <link>http://xuzhibin.com/tags/mongodb/</link>
+    <description>Recent content in mongodb on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 10 Apr 2012 04:24:17 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mongodb常用命令</title>
+      <link>http://xuzhibin.com/post/2012/mongodb-command/</link>
+      <pubDate>Tue, 10 Apr 2012 04:24:17 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2012/mongodb-command/</guid>
+      <description>超级用户相关 #进入数据库admin use admin #增加或修改用户密码 db.addUser(&amp;#39;name&amp;#39;,&amp;#39;pwd&amp;#39;) #查看用户列表 db.system.users.find() #用户认证 db.auth(&amp;#39;name&amp;#39;,&amp;#39;pwd&amp;#39;) #删除用户 db.removeUser(&amp;#39;name&amp;#39;) #查看所有用户 show users #查看所有数据库 show dbs #</description>
+    </item>
+    
+  </channel>
+</rss>

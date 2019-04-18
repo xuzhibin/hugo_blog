@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ui on 狂人居</title>
+    <link>http://xuzhibin.com/categories/ui/</link>
+    <description>Recent content in ui on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 02 Dec 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/categories/ui/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>移动WebApp开发记录</title>
+      <link>http://xuzhibin.com/post/2011/webapp-devlog/</link>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2011/webapp-devlog/</guid>
+      <description>这段时间在做移动WebApp开发，基于PhoneGap+Jquery Mobile，遇到不少问题，下面进行部分总结。 1.webStorage有</description>
+    </item>
+    
+    <item>
+      <title>悟透JavaScript笔记</title>
+      <link>http://xuzhibin.com/post/2011/understand-javascript/</link>
+      <pubDate>Tue, 08 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2011/understand-javascript/</guid>
+      <description>原生闭包 function Person(firstName, lastName, age) { //私有变量： var _firstName = firstName; var _lastName = lastName; //公共变量: this.age = age; //方法： this.getName = function() { return(firstName + &amp;#34; &amp;#34; + lastName); }; this.SayHello = function() { alert(&amp;#34;Hello, I&amp;#39;m &amp;#34; + firstName + &amp;#34; &amp;#34; + lastName); }; }; var BillGates = new</description>
+    </item>
+    
+    <item>
+      <title>HTML5笔记-web本地存储</title>
+      <link>http://xuzhibin.com/post/2011/h5-storage/</link>
+      <pubDate>Thu, 03 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2011/h5-storage/</guid>
+      <description>Web Storage就是放大版的cookie——提供了比cookie更大的本地存储，并且不会向服务器发出请求，并提供了一些API。总之本地存储能</description>
+    </item>
+    
+    <item>
+      <title>HTML5笔记-地理定位</title>
+      <link>http://xuzhibin.com/post/2011/h5-location/</link>
+      <pubDate>Thu, 03 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2011/h5-location/</guid>
+      <description>地理定位（Geolocation）是一个可以获取到客户端经纬度等地理位置信息的API。 API本身是不知道客户端地理信息的，常见的地理位置信息</description>
+    </item>
+    
+    <item>
+      <title>HTML5笔记-离线应用</title>
+      <link>http://xuzhibin.com/post/2011/h5-offlineapp/</link>
+      <pubDate>Thu, 03 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2011/h5-offlineapp/</guid>
+      <description>为了能够让用户在离线状态下继续访问 Web 应用，需要一种方式来指明应用程序离线工作时所需的资源文件。这样，浏览器才能在在线状态时，把这些文件缓存到</description>
+    </item>
+    
+    <item>
+      <title>一段广告加载代码</title>
+      <link>http://xuzhibin.com/post/2008/adload/</link>
+      <pubDate>Wed, 15 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2008/adload/</guid>
+      <description>var arr = { &amp;#34;default&amp;#34; : &amp;#34;http://dpvc.39.net/adpolestar/door/;ap=5E30CD32_CA9F _8CC4_BD09_09CE939700E0;ct=if;pu=san9;/?&amp;#34; } var Html = { load: function() { var s=document.getElementById(&amp;#34;show_drug&amp;#34;); if(typeof(s)==&amp;#34;undefined&amp;#34;||s==null) return arr[&amp;#34;default&amp;#34;]; var code = s.src.replace(/^.+\?/,&amp;#39;&amp;#39;); code=decodeURI(code); if(typeof(arr[code])!=&amp;#34;undefined&amp;#34;) return arr[code]; var index; while((index=code.lastIndexOf(&amp;#39;_&amp;#39;))!=-1){ code=code.substring(0,index); if(typeof(arr[code])!=&amp;#34;undefined&amp;#34;) { return arr[code]; } } return arr[&amp;#34;default&amp;#34;]; } } document.getElementById(&amp;#34;drug_tl&amp;#34;).innerHTML = &amp;#34;&amp;lt;iframe SRC=&amp;#39;&amp;#34;+Html.load()+&amp;#34;&amp;#39; NAME=&amp;#39;adFrame&amp;#39; WIDTH=&amp;#39;970&amp;#39; HEIGHT=&amp;#39;90&amp;#39; FRAMEBORDER=&amp;#39;no&amp;#39; BORDER=&amp;#39;0&amp;#39; MARGINWIDTH=&amp;#39;0&amp;#39; MARGINHEIGHT=&amp;#39;0&amp;#39; SCROLLING=&amp;#39;no&amp;#39;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;#34;; 注：show_drug为js i</description>
+    </item>
+    
+  </channel>
+</rss>

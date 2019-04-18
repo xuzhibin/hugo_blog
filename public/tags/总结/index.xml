@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>总结 on 狂人居</title>
+    <link>http://xuzhibin.com/tags/%E6%80%BB%E7%BB%93/</link>
+    <description>Recent content in 总结 on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 26 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>一指流沙，程序年华</title>
+      <link>http://xuzhibin.com/thoughts/2018/1226_hw_soft_king/</link>
+      <pubDate>Wed, 26 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/thoughts/2018/1226_hw_soft_king/</guid>
+      <description>&lt;p&gt;时间就像指间握不住的流沙，静静从身边溜走。&lt;/p&gt;
+
+&lt;p&gt;这些年来，我所从事的工作领域在变化，所使用的技术在变化，经历过一线比拼的激情，持续熬夜的艰辛，产品上线的喜悦，一直在公司从事基层研发工作。人生就像自己编写的程序，在程序化地运行着，但能在最好的年华，做自己最热爱的事，于我是一种幸福。&lt;/p&gt;
+
+&lt;h2 id=&#34;有了电脑后的-放飞&#34;&gt;有了电脑后的“放飞”&lt;/h2&gt;
+
+&lt;p&gt;上世纪90年代，爸爸单位用电脑记账，我觉得很是神奇，买不起电脑就买了个学习机，按照说明书，用GBASIC语言输出满屏各种形状的图形，心中被巨大的喜悦填满，开始了编程的启蒙。高考那年，又被《第一次亲密接触》中互联网的桥段吸引，毫不犹豫报了计算机专业，但遗憾被调剂到信息管理专业，这两个专业之间关系不大，我与编程失之交臂了。&lt;/p&gt;
+
+&lt;p&gt;大一下学期买了电脑后，我开始“放飞”自己，各种操作系统只要出新的版本，我就会重装体验，此外就是打游戏，或者“泡”论坛，渐渐发现编程的乐趣，之后就在编码的路上停不下来了。参加过学校计算机编程比赛获三等奖，和室友一起搭建系里的网站，大学毕业去了一家互联网公司做程序员，直到2005年，我有幸加入华为，一晃已经十三年了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>HW八年总结</title>
+      <link>http://xuzhibin.com/thoughts/2013/0909_hw_8years/</link>
+      <pubDate>Mon, 09 Sep 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/thoughts/2013/0909_hw_8years/</guid>
+      <description>&lt;p&gt;白驹过隙，进入公司已是八年，一路学习一路收获。往后回首，一些经历回想起来还历历在目：经历过一线比拼的激情，经历过产品上线的喜悦，经历过多个项目的变换，经历过持续熬夜的艰辛；写过不少的代码，带过一些徒弟，负责过团队开发，一直在公司从事基层的研发工作。一路走下来，也得到部门领导，公司同事的帮助、指导与鼓励，能让我一直坚持下去，过程中我也得到一些很高的认可，感触多，收获多。在此我先感谢大家！&lt;/p&gt;
+
+&lt;h2 id=&#34;团队成功才能成就个人&#34;&gt;团队成功才能成就个人&lt;/h2&gt;
+
+&lt;p&gt;还记得进入公司做的第一个项目，就是上海电信的XXX规范比拼项目，在上海一呆就是3个月之久。之后从09年开始到现在，我应该遇到一个不错的机遇，时逢部门的产品在欧洲开花结果，并且我非常有幸地参加了其中的多个项目，TLF比拼、VDF比拼、SFR比拼、O2的交付，DT比拼，有去一线出差现场操作，也有在家持续熬夜支撑。后又参与平台非常重要的新项目C3的构建，见证它从无到有，到多个局点的交付，目前C3在VDF交付。所以说是 &lt;strong&gt;只有团队的成功，才能有个人的成就&lt;/strong&gt; 。我作为一个普普通通的软件工程师，有机会参加了这么多的高端比拼与交付，也可能实属我人生中为数不多，以后可能值得会拿出来说一下的事儿。当然参与这些项目对我自身也是一项非常大的挑战，尤其是在比拼项目中亦时候不知熬了多少个夜晚，甚至彻夜难眠，也不知当面对客户苛刻的验证时的紧张感，心跳加速多少次。但始终相信我是在做一件有意义的事情这就是对的，虽然过程肯是辛苦的，结果可能不理想的。有时甚至还害怕而抵触过，抱怨过。但只要一旦接受了也就始终没有放弃过，&lt;strong&gt;把分给我的工作尽自己最大的努力做好做实，做到问心无愧&lt;/strong&gt; 。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

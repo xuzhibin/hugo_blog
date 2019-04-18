@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 狂人居</title>
+    <link>http://xuzhibin.com/post/</link>
+    <description>Recent content in Posts on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 16 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>博客转为hugo</title>
+      <link>http://xuzhibin.com/post/2019/hugo-install/</link>
+      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2019/hugo-install/</guid>
+      <description>&lt;p&gt;hexo生成速度越来越慢了，决定转为hugo，hugo安装使用简单，不过模板数量和质量的确和hexo有差距。&lt;/p&gt;
+
+&lt;p&gt;hugo生成速度非常快，以前hexo生成站点要10几秒，hugo在1秒以内。&lt;/p&gt;
+
+&lt;h1 id=&#34;安装&#34;&gt;安装&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.gohugo.org&#34;&gt;Hugo中文文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/xtfly/hugo-theme-next&#34;&gt;Next模板&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.olowolo.com/post/hugo-quick-start/#url管理&#34;&gt;Hugo 从入门到会用&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>React &#43; Electron 搭建一个桌面应用[转]</title>
+      <link>http://xuzhibin.com/post/2018/electron-react/</link>
+      <pubDate>Thu, 29 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2018/electron-react/</guid>
+      <description>&lt;p&gt;当你冲这个标题点进来的时候，我猜你一定知道 React 是什么，更多详情请&lt;a href=&#34;https://react.docschina.org&#34;&gt;戳这里&lt;/a&gt;，就不介绍React了，一个神般存在的前端框架。另外，浏览器和移动端横行的时代，为什么还需要桌面应用？我就不解释了，反正优点很多，做为技术多学一点总没错。&lt;/p&gt;
+
+&lt;h2 id=&#34;electron-简单介绍&#34;&gt;Electron 简单介绍&lt;/h2&gt;
+
+&lt;h3 id=&#34;是什么&#34;&gt;是什么?&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://link.juejin.im/?target=https%3A%2F%2Felectronjs.org%2Fdocs%2Ftutorial%2Fabout&#34;&gt;官网&lt;/a&gt;是这么介绍的：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://link.juejin.im/?target=https%3A%2F%2Felectronjs.org%2F&#34;&gt;Electron&lt;/a&gt;is an open source library developed by GitHub for building cross-platform desktop applications with HTML, CSS, and JavaScript. Electron accomplishes this by combining &lt;a href=&#34;https://link.juejin.im/?target=https%3A%2F%2Fwww.chromium.org%2FHome&#34;&gt;Chromium&lt;/a&gt;and &lt;a href=&#34;https://link.juejin.im/?target=https%3A%2F%2Fnodejs.org%2F&#34;&gt;Node.js&lt;/a&gt;into a single runtime and apps can be packaged for Mac, Windows, and Linux.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;简单翻译一下就是：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;​&lt;a href=&#34;https://link.juejin.im/?target=https%3A%2F%2Felectron.atom.io%2F&#34;&gt;Electron&lt;/a&gt;是一个由 GitHub 开发的开源库，通过将 &lt;a href=&#34;https://link.juejin.im/?target=https%3A%2F%2Fwww.chromium.org%2FHome&#34;&gt;Chromium&lt;/a&gt;) 和&lt;a href=&#34;https://link.juejin.im/?target=https%3A%2F%2Fnodejs.org%2F&#34;&gt;Node.js&lt;/a&gt;组合并使用 HTML，CSS 和 JavaScript 进行构建 Mac，Windows，和 Linux 跨平台桌面应用程序。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;隐藏意思：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;让前端开发者快乐简单拥抱桌面应用！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>广东人真是太太太太太好玩了</title>
+      <link>http://xuzhibin.com/post/2018/guangdongren/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2018/guangdongren/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://blog-img.xuzhibin.com/2018-11-28-075521.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>gogs开启ssh支持</title>
+      <link>http://xuzhibin.com/post/2018/gogs-ssh/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2018/gogs-ssh/</guid>
+      <description>&lt;p&gt;已经通过docker安装了gogs，http能正常使用，ssh不能使用&lt;/p&gt;
+
+&lt;h1 id=&#34;gogs配置app-ini&#34;&gt;gogs配置app.ini&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;[server]&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;DOMAIN&lt;/span&gt;           &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;xxx&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;HTTP_PORT&lt;/span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;3000&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;ROOT_URL&lt;/span&gt;         &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;http://xxx:13000/&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;DISABLE_SSH&lt;/span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;false&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;SSH_DOMAIN&lt;/span&gt;       &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;xxx:10022&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;SSH_PORT&lt;/span&gt;         &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;22&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;START_SSH_SERVER&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;false&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;SSH_LISTEN_PORT&lt;/span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;10033&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;SSH_ROOT_PATH&lt;/span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;/home/git/.ssh&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;OFFLINE_MODE&lt;/span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;false&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;REWRITE_AUTHORIZED_KEYS_AT_START&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>mac下安装pyside2</title>
+      <link>http://xuzhibin.com/post/2018/mac-pyside-1st/</link>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2018/mac-pyside-1st/</guid>
+      <description>&lt;p&gt;环境：mac已经安装了python3.5，pip3.5
+IDE:PyCharm&lt;/p&gt;
+
+&lt;h1 id=&#34;安装pyside2&#34;&gt;安装pyside2&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pip3.5 install --index-url&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;http://download.qt.io/snapshots/ci/pyside/5.9/latest/ pyside2 --trusted-host download.qt.io&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&#34;简单实例&#34;&gt;简单实例&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/usr/bin/python&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# 1st.py&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; sys
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; PySide2 &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; QtGui
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; PySide2 &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; QtWidgets
+
+app &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; QtWidgets&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;QApplication(sys&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;argv)
+
+wid &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; QtWidgets&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;QWidget()
+wid&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;resize(&lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;150&lt;/span&gt;)
+wid&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;setWindowTitle(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Simple&amp;#39;&lt;/span&gt;)
+wid&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+
+sys&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;exit(app&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;exec_())&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;http://blog-img.xuzhibin.com/2018-11-28-081016.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>家庭数据中心</title>
+      <link>http://xuzhibin.com/post/2018/nas-home/</link>
+      <pubDate>Sun, 22 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2018/nas-home/</guid>
+      <description>&lt;p&gt;私人数据越来越多（如照片），网盘越来越小，并且不是关闭就是被墙。决定搭建自己的家庭数据中心。
+&lt;img src=&#34;http://blog-img.xuzhibin.com/2018-11-28-080111.jpg&#34; alt=&#34;WechatIMG156&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;计划-预算&#34;&gt;计划&amp;amp;预算&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;硬件：群晖218+（加一条8g内存），希捷酷狼4T*2，玩客云，希捷移动硬盘2T（玩客云用），4T（群晖用）各一个，小米盒子国际版，斐讯k2p路由器（刷官改rom）&lt;/li&gt;
+&lt;li&gt;预算：8k&lt;/li&gt;
+&lt;li&gt;目的：数据备份，家庭影视
+其实黑群也可以，价格更便宜。最好4盘位，2盘位还是少了点。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>在Coding部署Hexo</title>
+      <link>http://xuzhibin.com/post/2016/hexo-coding/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2016/hexo-coding/</guid>
+      <description>网上的Hexo教程大多是部署在Github，在实际的使用中，Github速度比较满，有时更新还会抽风一下，于是想在国内找个替代方案。 目前来说</description>
+    </item>
+    
+    <item>
+      <title>Hexo安装记</title>
+      <link>http://xuzhibin.com/post/2016/hexo-install/</link>
+      <pubDate>Mon, 30 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2016/hexo-install/</guid>
+      <description>Hexo是啥 Hexo 是由 Node.js 驱动的一款快速、简单且功能强大的博客框架。可以快速将 Markdown 格式的文档生成静态页面。是越来越笨重的 Wordpress 和麻烦的空间管理的替代方案</description>
+    </item>
+    
+    <item>
+      <title>npm小结</title>
+      <link>http://xuzhibin.com/post/2016/npm-summary/</link>
+      <pubDate>Sun, 29 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2016/npm-summary/</guid>
+      <description>随着一系列基于nodes的应用/工具的出现，无论在node应用的开发，还是使用中，包管理都扮演着一个很重要的作用。NPM（node package mana</description>
+    </item>
+    
+    <item>
+      <title>Git 常用命令速查表</title>
+      <link>http://xuzhibin.com/post/2013/git-command/</link>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2013/git-command/</guid>
+      <description>配置 $ git config --global user.name &amp;#34;John Doe&amp;#34; $ git config --global user.email johndoe@example.com 创建版本库 $ git clone [url] #克隆远程版本库 $ git clone git://github.com/schacon/grit.git $ git clone git://github.com/schacon/grit.git mygrit $ git clone --bare my_project my_project.git #创建纯仓库 $ git init #初始化本地版本库 $ git init --bare #</description>
+    </item>
+    
+    <item>
+      <title>Linux下重置MySQL root密码</title>
+      <link>http://xuzhibin.com/post/2013/reset-mysql-rootpass/</link>
+      <pubDate>Sat, 17 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2013/reset-mysql-rootpass/</guid>
+      <description>1、停止MySQL服务 执行： /etc/init.d/mysql stop 你的机器上也不一定是/etc/init.d/mysql，也可能是/etc/init.d/mysqld 2、跳过</description>
+    </item>
+    
+    <item>
+      <title>VPS硬盘被撑满</title>
+      <link>http://xuzhibin.com/post/2013/vps-harddisk-full/</link>
+      <pubDate>Fri, 12 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2013/vps-harddisk-full/</guid>
+      <description>早上打开博客，发现显示“无法连上数据库”，遂登录ssh，重启服务。重启后，Wordpress可以访问了，但是标签及分类目录全部丢失。一阵Go</description>
+    </item>
+    
+    <item>
+      <title>android中加载图片时出现oom</title>
+      <link>http://xuzhibin.com/post/2013/android-oom/</link>
+      <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2013/android-oom/</guid>
+      <description>ImageView加载图片时，有时会出现OOM imageView.setImageResource(imageId); 解决方法 /** * 以最省内存的方式读取本地资源的图片 * * @param context * @param resId * @return */ public static Bitmap readBitMap(Context context, int resId) { BitmapFactory.Options opt = new BitmapFactory.Options();</description>
+    </item>
+    
+    <item>
+      <title>Go Socket例子</title>
+      <link>http://xuzhibin.com/post/2012/go-socket/</link>
+      <pubDate>Wed, 12 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2012/go-socket/</guid>
+      <description>Tcp Server (tcpserver.go) package main import ( &amp;#34;fmt&amp;#34; &amp;#34;net&amp;#34; &amp;#34;os&amp;#34; &amp;#34;time&amp;#34; ) func main() { service := &amp;#34;:1200&amp;#34; tcpAddr, err := net.ResolveTCPAddr(&amp;#34;tcp4&amp;#34;, service) checkError(err) listener, err := net.ListenTCP(&amp;#34;tcp&amp;#34;, tcpAddr) checkError(err) for { conn, err := listener.Accept() if err != nil { continue } go handleClient(conn) } } func handleClient(conn net.Conn) { defer conn.Close() daytime := time.Now().String() fmt.Fprintf(os.Stderr,&amp;#34;connect time:%s,client ip:%s\r\n&amp;#34;,daytime,conn.RemoteAddr().String()) _,err := conn.Write([]byte(daytime)) // don&amp;#39;t care about return value checkError(err) fmt.Fprintf(os.Stderr,&amp;#34;send</description>
+    </item>
+    
+    <item>
+      <title>ElasticSearch入门笔记</title>
+      <link>http://xuzhibin.com/post/2012/elasticsearch-getstart/</link>
+      <pubDate>Thu, 06 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2012/elasticsearch-getstart/</guid>
+      <description>ElasticSearch 是构建在Apache Lucene之上的的搜索引擎服务，开源（Apache2协议），分布式，RESTful。安装方便，使用简单。 官方站点：h</description>
+    </item>
+    
+    <item>
+      <title>安装Tornado</title>
+      <link>http://xuzhibin.com/post/2012/install-tornado/</link>
+      <pubDate>Sat, 12 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2012/install-tornado/</guid>
+      <description>安装Tornado wget https://github.com/downloads/facebook/tornado/tornado-2.2.1.tar.gz tar xvzf tornado-2.2.1.tar.gz cd tornado-2.2.1 python setup.py build python setup.py install 到此，tornado已安装完成。 开启服务，运行hello world程序 cd tornado-2.2.1 ./demos/helloworld/helloworld.py 此时打开浏览器，地址</description>
+    </item>
+    
+    <item>
+      <title>mongodb常用命令</title>
+      <link>http://xuzhibin.com/post/2012/mongodb-command/</link>
+      <pubDate>Tue, 10 Apr 2012 04:24:17 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2012/mongodb-command/</guid>
+      <description>超级用户相关 #进入数据库admin use admin #增加或修改用户密码 db.addUser(&amp;#39;name&amp;#39;,&amp;#39;pwd&amp;#39;) #查看用户列表 db.system.users.find() #用户认证 db.auth(&amp;#39;name&amp;#39;,&amp;#39;pwd&amp;#39;) #删除用户 db.removeUser(&amp;#39;name&amp;#39;) #查看所有用户 show users #查看所有数据库 show dbs #</description>
+    </item>
+    
+    <item>
+      <title>移动WebApp开发记录</title>
+      <link>http://xuzhibin.com/post/2011/webapp-devlog/</link>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2011/webapp-devlog/</guid>
+      <description>这段时间在做移动WebApp开发，基于PhoneGap+Jquery Mobile，遇到不少问题，下面进行部分总结。 1.webStorage有</description>
+    </item>
+    
+    <item>
+      <title>悟透JavaScript笔记</title>
+      <link>http://xuzhibin.com/post/2011/understand-javascript/</link>
+      <pubDate>Tue, 08 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2011/understand-javascript/</guid>
+      <description>原生闭包 function Person(firstName, lastName, age) { //私有变量： var _firstName = firstName; var _lastName = lastName; //公共变量: this.age = age; //方法： this.getName = function() { return(firstName + &amp;#34; &amp;#34; + lastName); }; this.SayHello = function() { alert(&amp;#34;Hello, I&amp;#39;m &amp;#34; + firstName + &amp;#34; &amp;#34; + lastName); }; }; var BillGates = new</description>
+    </item>
+    
+    <item>
+      <title>HTML5笔记-web本地存储</title>
+      <link>http://xuzhibin.com/post/2011/h5-storage/</link>
+      <pubDate>Thu, 03 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2011/h5-storage/</guid>
+      <description>Web Storage就是放大版的cookie——提供了比cookie更大的本地存储，并且不会向服务器发出请求，并提供了一些API。总之本地存储能</description>
+    </item>
+    
+    <item>
+      <title>HTML5笔记-地理定位</title>
+      <link>http://xuzhibin.com/post/2011/h5-location/</link>
+      <pubDate>Thu, 03 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2011/h5-location/</guid>
+      <description>地理定位（Geolocation）是一个可以获取到客户端经纬度等地理位置信息的API。 API本身是不知道客户端地理信息的，常见的地理位置信息</description>
+    </item>
+    
+    <item>
+      <title>HTML5笔记-离线应用</title>
+      <link>http://xuzhibin.com/post/2011/h5-offlineapp/</link>
+      <pubDate>Thu, 03 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2011/h5-offlineapp/</guid>
+      <description>为了能够让用户在离线状态下继续访问 Web 应用，需要一种方式来指明应用程序离线工作时所需的资源文件。这样，浏览器才能在在线状态时，把这些文件缓存到</description>
+    </item>
+    
+    <item>
+      <title>iptables封ip段的一些常见命令</title>
+      <link>http://xuzhibin.com/post/2011/iptables-blockip/</link>
+      <pubDate>Wed, 18 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2011/iptables-blockip/</guid>
+      <description>linux下使用iptables封ip段的一些常见命令： 封单个IP的命令 iptables -I INPUT -s 211.1.0.0 -j DROP 封IP段的命令 iptables -I INPUT -s 211.1.0.0/16 -j DROP iptables -I INPUT -s 211.2.0.0/16 -j DROP iptables -I INPUT -s 211.3.0.0/16 -j</description>
+    </item>
+    
+    <item>
+      <title>网页正文提取算法研究[非正则]</title>
+      <link>http://xuzhibin.com/post/2010/text-extraction/</link>
+      <pubDate>Thu, 11 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2010/text-extraction/</guid>
+      <description>互联网的页面展现形式相当丰富，但是如果按页面结构特征来分类，却不外乎以下几种类型：首页（包括栏目首页），列表页，内容页，评论页。 (1) **首页:</description>
+    </item>
+    
+    <item>
+      <title>Lucene.Net入门基础</title>
+      <link>http://xuzhibin.com/post/2010/lucenenet-getstart/</link>
+      <pubDate>Sun, 13 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2010/lucenenet-getstart/</guid>
+      <description>简单的例子 //索引 Private void Index() { IndexWriter writer = new IndexWriter(@&amp;#34;E:\Index&amp;#34;, new StandardAnalyzer()); Document doc = new Document(); doc.Add(new Field(&amp;#34;Text&amp;#34;,&amp;#34;哦耶,美丽的姑娘。&amp;#34;, Field.Store.YES, Field.Index.TOKENIZED)); writer.AddDocument(doc);</description>
+    </item>
+    
+    <item>
+      <title>CentOS安装crontab及使用方法</title>
+      <link>http://xuzhibin.com/post/2010/install-crontab/</link>
+      <pubDate>Sat, 05 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2010/install-crontab/</guid>
+      <description>安装crontab: [root@CentOS ~] yum install vixie-cron [root@CentOS ~] yum install crontabs 说明： vixie-cron软件包是cron的主程序； crontabs软件包是用来安装、卸装、或列举用</description>
+    </item>
+    
+    <item>
+      <title>.Net下开发Windows Service</title>
+      <link>http://xuzhibin.com/post/2010/net-winservice/</link>
+      <pubDate>Sun, 28 Feb 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2010/net-winservice/</guid>
+      <description>Windows服务能做些什么？ Windows服务是这些后台程序、后台服务的正规名词。Windows服务的运行可以在没有用户干预的情况下，在后</description>
+    </item>
+    
+    <item>
+      <title>大规模网站架构</title>
+      <link>http://xuzhibin.com/post/2009/web-architecture/</link>
+      <pubDate>Wed, 16 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2009/web-architecture/</guid>
+      <description>以下并非所有都经过本人实践,部分为根据资料的假想所得,切勿贯彻本本主义。 网站架构目标 高可用性(High Availability) 可伸缩性(Scalability) 高</description>
+    </item>
+    
+    <item>
+      <title>NVelocity直接使用字符串模板</title>
+      <link>http://xuzhibin.com/post/2009/nvelocity-demo/</link>
+      <pubDate>Sat, 18 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2009/nvelocity-demo/</guid>
+      <description>using System; using System.IO; using System.Collections; using System.Collections.Generic; using NVelocity; using NVelocity.App; namespace ConsoleApplication1 { class Program { static void Main(string[] args) { string templates = &amp;#34;Hi $name $surname, The date is $date.&amp;#34;; Dictionary oo = new Dictionary(); oo.Add(&amp;#34;name&amp;#34;, &amp;#34;Joe&amp;#34;); oo.Add(&amp;#34;surname&amp;#34;, &amp;#34;Smith&amp;#34;); oo.Add(&amp;#34;date&amp;#34;, DateTime.Now.ToString(&amp;#34;D&amp;#34;)); Console.WriteLine(Fill(templates,oo)); Console.ReadLine(); } static public string Fill(string template, IDictionary values) { var engine = new VelocityEngine(); engine.Init(); var context = new VelocityContext(); if (values != null)</description>
+    </item>
+    
+    <item>
+      <title>一段广告加载代码</title>
+      <link>http://xuzhibin.com/post/2008/adload/</link>
+      <pubDate>Wed, 15 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2008/adload/</guid>
+      <description>var arr = { &amp;#34;default&amp;#34; : &amp;#34;http://dpvc.39.net/adpolestar/door/;ap=5E30CD32_CA9F _8CC4_BD09_09CE939700E0;ct=if;pu=san9;/?&amp;#34; } var Html = { load: function() { var s=document.getElementById(&amp;#34;show_drug&amp;#34;); if(typeof(s)==&amp;#34;undefined&amp;#34;||s==null) return arr[&amp;#34;default&amp;#34;]; var code = s.src.replace(/^.+\?/,&amp;#39;&amp;#39;); code=decodeURI(code); if(typeof(arr[code])!=&amp;#34;undefined&amp;#34;) return arr[code]; var index; while((index=code.lastIndexOf(&amp;#39;_&amp;#39;))!=-1){ code=code.substring(0,index); if(typeof(arr[code])!=&amp;#34;undefined&amp;#34;) { return arr[code]; } } return arr[&amp;#34;default&amp;#34;]; } } document.getElementById(&amp;#34;drug_tl&amp;#34;).innerHTML = &amp;#34;&amp;lt;iframe SRC=&amp;#39;&amp;#34;+Html.load()+&amp;#34;&amp;#39; NAME=&amp;#39;adFrame&amp;#39; WIDTH=&amp;#39;970&amp;#39; HEIGHT=&amp;#39;90&amp;#39; FRAMEBORDER=&amp;#39;no&amp;#39; BORDER=&amp;#39;0&amp;#39; MARGINWIDTH=&amp;#39;0&amp;#39; MARGINHEIGHT=&amp;#39;0&amp;#39; SCROLLING=&amp;#39;no&amp;#39;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;#34;; 注：show_drug为js i</description>
+    </item>
+    
+  </channel>
+</rss>

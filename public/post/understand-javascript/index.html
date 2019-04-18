@@ -1,0 +1,513 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>悟透JavaScript笔记 - 狂人居</title>
+    <meta name="keywords" content="博客,程序员,架构师,个人,思考,读书,笔记,技术,分享,PHP">
+    
+    <meta property="og:title" content="悟透JavaScript笔记">
+    <meta property="og:site_name" content="狂人居">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="悟透JavaScript笔记 - 狂人居" />
+    <meta name="description" content="博客 | 软件 | 架构 | PHP | Python"> 
+    
+    <link rel="shortcut icon" href="http://xuzhibin.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://xuzhibin.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://xuzhibin.com/img/apple-touch-icon.png" />
+    <link href="http://xuzhibin.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/css/syntax.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="http://xuzhibin.com/js/highlight/styles/a11y-dark.css">
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://xuzhibin.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">狂人居</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">路漫漫其修远兮,吾将上下而求索</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/categories/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/tags/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/development/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-star"></i> <br />开发
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/resume/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-thumbs-up"></i> <br />Resume
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://xuzhibin.com/post/understand-javascript/" itemprop="url">
+        悟透JavaScript笔记
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2011-11-08">
+    2011-11-08
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://xuzhibin.com/categories/ui" itemprop="url" rel="index">
+        <span itemprop="name">ui</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1099 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>原生闭包</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Person</span>(<span style="color:#a6e22e">firstName</span>, <span style="color:#a6e22e">lastName</span>, <span style="color:#a6e22e">age</span>)
+{
+    <span style="color:#75715e">//私有变量：
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_firstName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firstName</span>;
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">_lastName</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">lastName</span>;
+
+    <span style="color:#75715e">//公共变量:
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">age</span>;
+
+    <span style="color:#75715e">//方法：
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">getName</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+    {
+        <span style="color:#66d9ef">return</span>(<span style="color:#a6e22e">firstName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">lastName</span>);
+    };
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">SayHello</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+    {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Hello, I&#39;m &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">firstName</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">lastName</span>);
+    };
+};
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">BillGates</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;Bill&#34;</span>, <span style="color:#e6db74">&#34;Gates&#34;</span>, <span style="color:#ae81ff">53</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">SteveJobs</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;Steve&#34;</span>, <span style="color:#e6db74">&#34;Jobs&#34;</span>, <span style="color:#ae81ff">53</span>);
+
+<span style="color:#a6e22e">BillGates</span>.<span style="color:#a6e22e">SayHello</span>();
+<span style="color:#a6e22e">SteveJobs</span>.<span style="color:#a6e22e">SayHello</span>();
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">BillGates</span>.<span style="color:#a6e22e">getName</span>() <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">BillGates</span>.<span style="color:#a6e22e">age</span>);
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">BillGates</span>.<span style="color:#a6e22e">firstName</span>);     <span style="color:#75715e">//这里不能访问到私有变量
+</span></code></pre></div>
+<p>甘露模型</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//定义类的语法甘露：Class()
+</span><span style="color:#75715e">//最后一个参数是JSON表示的类定义
+</span><span style="color:#75715e">//如果参数数量大于1个，则第一个参数是基类
+</span><span style="color:#75715e">//第一个和最后一个之间参数，将来可表示类实现的接口
+</span><span style="color:#75715e">//返回值是类，类是一个构造函数
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Class</span>()
+{
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">aDefine</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arguments</span>[<span style="color:#a6e22e">arguments</span>.<span style="color:#a6e22e">length</span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]; <span style="color:#75715e">//最后一个参数是类定义
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">aDefine</span>) <span style="color:#66d9ef">return</span>;
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">aBase</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">arguments</span>.<span style="color:#a6e22e">length</span><span style="color:#f92672">&gt;</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">arguments</span>[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">:</span> <span style="color:#a6e22e">object</span>; <span style="color:#75715e">//解析基类
+</span><span style="color:#75715e"></span>    
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">prototype_</span>(){}; <span style="color:#75715e">//构造prototype的临时函数，用于挂接原型链
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">prototype_</span>.<span style="color:#a6e22e">prototype</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">aBase</span>.<span style="color:#a6e22e">prototype</span>;  <span style="color:#75715e">//准备传递prototype
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">aPrototype</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">prototype_</span>();    <span style="color:#75715e">//建立类要用的prototype
+</span><span style="color:#75715e"></span>    
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">member</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">aDefine</span>)  <span style="color:#75715e">//复制类定义到当前类的prototype
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">member</span><span style="color:#f92672">!=</span><span style="color:#e6db74">&#34;Create&#34;</span>)    <span style="color:#75715e">//构造函数不用复制
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">aPrototype</span>[<span style="color:#a6e22e">member</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">aDefine</span>[<span style="color:#a6e22e">member</span>];
+            
+    <span style="color:#75715e">//根据是否继承特殊属性和性能情况，可分别注释掉下列的语句
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">aDefine</span>.<span style="color:#a6e22e">toString</span> <span style="color:#f92672">!=</span> Object.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">toString</span>)
+        <span style="color:#a6e22e">aPrototype</span>.<span style="color:#a6e22e">toString</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">aDefine</span>.<span style="color:#a6e22e">toString</span>;
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">aDefine</span>.<span style="color:#a6e22e">toLocaleString</span> <span style="color:#f92672">!=</span> Object.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">toLocaleString</span>)
+        <span style="color:#a6e22e">aPrototype</span>.<span style="color:#a6e22e">toLocaleString</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">aDefine</span>.<span style="color:#a6e22e">toLocaleString</span>;
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">aDefine</span>.<span style="color:#a6e22e">valueOf</span> <span style="color:#f92672">!=</span> Object.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">valueOf</span>)
+        <span style="color:#a6e22e">aPrototype</span>.<span style="color:#a6e22e">valueOf</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">aDefine</span>.<span style="color:#a6e22e">valueOf</span>;
+
+    <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">aDefine</span>.<span style="color:#a6e22e">Create</span>)  <span style="color:#75715e">//若有构造函数
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">aType</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">aDefine</span>.<span style="color:#a6e22e">Create</span>  <span style="color:#75715e">//类型即为该构造函数
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">else</span>    <span style="color:#75715e">//否则为默认构造函数
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">aType</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+        {
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">base</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">arguments</span>);   <span style="color:#75715e">//调用基类构造函数
+</span><span style="color:#75715e"></span>        };
+
+    <span style="color:#a6e22e">aType</span>.<span style="color:#a6e22e">prototype</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">aPrototype</span>;   <span style="color:#75715e">//设置类(构造函数)的prototype
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">aType</span>.<span style="color:#a6e22e">Base</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">aBase</span>;             <span style="color:#75715e">//设置类型关系，便于追溯继承关系
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">aType</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">Type</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">aType</span>;   <span style="color:#75715e">//为本类对象扩展一个Type属性
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">aType</span>;   <span style="color:#75715e">//返回构造函数作为类
+</span><span style="color:#75715e"></span>};
+
+<span style="color:#75715e">//根类object定义：
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">object</span>(){}    <span style="color:#75715e">//定义小写的object根类，用于实现最基础的方法等
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">object</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">isA</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">aType</span>)   <span style="color:#75715e">//判断对象是否属于某类型
+</span><span style="color:#75715e"></span>{
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">self</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">Type</span>;
+    <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">self</span>)
+    {
+        <span style="color:#66d9ef">if</span>(<span style="color:#a6e22e">self</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">aType</span>) <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+        <span style="color:#a6e22e">self</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">Base</span>;
+    };
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+};
+
+<span style="color:#a6e22e">object</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">base</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()  <span style="color:#75715e">//调用基类构造函数
+</span><span style="color:#75715e"></span>{
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Base</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">Type</span>.<span style="color:#a6e22e">Base</span>;  <span style="color:#75715e">//获取当前对象的基类  
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">Base</span>.<span style="color:#a6e22e">Base</span>)  <span style="color:#75715e">//若基类已没有基类
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">Base</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">arguments</span>)     <span style="color:#75715e">//则直接调用基类构造函数
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">else</span>    <span style="color:#75715e">//若基类还有基类         
+</span><span style="color:#75715e"></span>    {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">base</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">MakeBase</span>(<span style="color:#a6e22e">Base</span>);     <span style="color:#75715e">//先覆写this.base
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">Base</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">arguments</span>);    <span style="color:#75715e">//再调用基类构造函数
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">delete</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">base</span>;               <span style="color:#75715e">//删除覆写的base属性
+</span><span style="color:#75715e"></span>    };
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">MakeBase</span>(<span style="color:#a6e22e">Type</span>) <span style="color:#75715e">//包装基类构造函数
+</span><span style="color:#75715e"></span>    {
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Base</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Type</span>.<span style="color:#a6e22e">Base</span>;
+        <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">Base</span>.<span style="color:#a6e22e">Base</span>) <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">Base</span>; <span style="color:#75715e">//基类已无基类，就无需包装
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span>()   <span style="color:#75715e">//包装为引用临时变量Base的闭包函数
+</span><span style="color:#75715e"></span>        {
+            <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">base</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">MakeBase</span>(<span style="color:#a6e22e">Base</span>);     <span style="color:#75715e">//先覆写this.base
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">Base</span>.<span style="color:#a6e22e">apply</span>(<span style="color:#66d9ef">this</span>, <span style="color:#a6e22e">arguments</span>);    <span style="color:#75715e">//再调用基类构造函数
+</span><span style="color:#75715e"></span>        };
+    };
+};
+
+<span style="color:#75715e">//语法甘露的应用效果：    
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Class</span>      <span style="color:#75715e">//默认派生自object基本类
+</span><span style="color:#75715e"></span>({
+    <span style="color:#a6e22e">Create</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>)
+    {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">base</span>();    <span style="color:#75715e">//调用上层构造函数
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">age</span>;
+    },
+    <span style="color:#a6e22e">SayHello</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>()
+    {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Hello, I&#39;m &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; years old.&#34;</span>);
+    },
+    <span style="color:#a6e22e">toString</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>()    <span style="color:#75715e">//覆写toString方法
+</span><span style="color:#75715e"></span>    {
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span>;
+    }
+});
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">Employee</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Class</span>(<span style="color:#a6e22e">Person</span>,    <span style="color:#75715e">//派生自Person类
+</span><span style="color:#75715e"></span>{
+    <span style="color:#a6e22e">Create</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>, <span style="color:#a6e22e">salary</span>)
+    {
+        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">base</span>(<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>);  <span style="color:#75715e">//调用基类的构造函数
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">salary</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">salary</span>;
+    },
+    <span style="color:#a6e22e">ShowMeTheMoney</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>()
+    {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#66d9ef">this</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; $&#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">salary</span>); <span style="color:#75715e">//这里直接引用this将隐式调用toString()
+</span><span style="color:#75715e"></span>    }
+});
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">BillGates</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;Bill Gates&#34;</span>, <span style="color:#ae81ff">53</span>);
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">SteveJobs</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Employee</span>(<span style="color:#e6db74">&#34;Steve Jobs&#34;</span>, <span style="color:#ae81ff">53</span>, <span style="color:#ae81ff">1234</span>);
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">BillGates</span>);   <span style="color:#75715e">//这里将隐式调用覆写后的toString()方法
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">BillGates</span>.<span style="color:#a6e22e">SayHello</span>();
+<span style="color:#a6e22e">SteveJobs</span>.<span style="color:#a6e22e">SayHello</span>();
+<span style="color:#a6e22e">SteveJobs</span>.<span style="color:#a6e22e">ShowMeTheMoney</span>();
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">LittleBill</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">BillGates</span>.<span style="color:#a6e22e">Type</span>(<span style="color:#e6db74">&#34;Little Bill&#34;</span>, <span style="color:#ae81ff">6</span>); <span style="color:#75715e">//用BillGate的类型建LittleBill
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">LittleBill</span>.<span style="color:#a6e22e">SayHello</span>();
+
+<span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">BillGates</span>.<span style="color:#a6e22e">isA</span>(<span style="color:#a6e22e">Person</span>));       <span style="color:#75715e">//true
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">BillGates</span>.<span style="color:#a6e22e">isA</span>(<span style="color:#a6e22e">Employee</span>));     <span style="color:#75715e">//false
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">SteveJobs</span>.<span style="color:#a6e22e">isA</span>(<span style="color:#a6e22e">Person</span>));       <span style="color:#75715e">//true
+</span></code></pre></div>
+<p>参考资料：</p>
+
+<p>悟透JavaScript</p>
+
+<p><a href="http://www.cnblogs.com/leadzen/archive/2008/02/25/1073404.html">http://www.cnblogs.com/leadzen/archive/2008/02/25/1073404.html</a></p>
+
+<p>悟透JavaScript 之 甘露模型（新）</p>
+
+<p><a href="http://www.cnblogs.com/leadzen/archive/2008/06/04/1213090.html">http://www.cnblogs.com/leadzen/archive/2008/06/04/1213090.html</a></p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="http://xuzhibin.com/tags/javascript" rel="tag" title="javascript">#javascript#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://xuzhibin.com/post/webapp-devlog/" rel="next" title="移动WebApp开发记录">
+        <i class="fa fa-chevron-left"></i> 移动WebApp开发记录
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://xuzhibin.com/post/h5-storage/" rel="prev" title="HTML5笔记-web本地存储">
+        HTML5笔记-web本地存储 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://xuzhibin.com/images/avatar.png"
+        alt="jabin" />
+    <p class="site-author-name" itemprop="name">jabin</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://xuzhibin.com/post/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://xuzhibin.com/categories/">      
+         
+        <span class="site-state-item-count">12</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://xuzhibin.com/tags/">
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="" target="_blank" title="">
+            <i class="fa fa-fw fa-"></i>
+            
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="" target="_blank" title="">
+            <i class="fa fa-fw fa-"></i>
+            
+        </a>
+        </span>
+    
+</div>
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2008 - 2019</span>
+  <span class="with-love"><i class="fa fa-user"></i></span>
+  <span class="author" itemprop="copyrightHolder">狂人居</span>
+</div>
+
+
+
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.1</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+<div class="theme-info">
+| <a href="http://www.miitbeian.gov.cn/">粤ICP备17022455号-1</a> | <a href="http://www.miitbeian.gov.cn/">粤ICP备17022455号-2</a> 
+</div>
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://xuzhibin.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://xuzhibin.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/utils.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/motion.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/affix.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/search.js"></script>
+
+<script src="http://xuzhibin.com/js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

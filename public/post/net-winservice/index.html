@@ -1,0 +1,592 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>.Net下开发Windows Service - 狂人居</title>
+    <meta name="keywords" content="博客,程序员,架构师,个人,思考,读书,笔记,技术,分享,PHP">
+    
+    <meta property="og:title" content=".Net下开发Windows Service">
+    <meta property="og:site_name" content="狂人居">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content=".Net下开发Windows Service - 狂人居" />
+    <meta name="description" content="博客 | 软件 | 架构 | PHP | Python"> 
+    
+    <link rel="shortcut icon" href="http://xuzhibin.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://xuzhibin.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://xuzhibin.com/img/apple-touch-icon.png" />
+    <link href="http://xuzhibin.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/css/syntax.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="http://xuzhibin.com/js/highlight/styles/a11y-dark.css">
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://xuzhibin.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">狂人居</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">路漫漫其修远兮,吾将上下而求索</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/categories/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/tags/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/development/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-star"></i> <br />开发
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/resume/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-thumbs-up"></i> <br />Resume
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://xuzhibin.com/post/net-winservice/" itemprop="url">
+        .Net下开发Windows Service
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2010-02-28">
+    2010-02-28
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://xuzhibin.com/categories/.net" itemprop="url" rel="index">
+        <span itemprop="name">.net</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1702 字 ~4分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    
+
+<h1 id="windows服务能做些什么">Windows服务能做些什么？</h1>
+
+<p>Windows服务是这些后台程序、后台服务的正规名词。Windows服务的运行可以在没有用户干预的情况下，在后台运行，没有任何界面。通过Windows服务管理器进行管理。服务管理器也只能做些简单的操作：开始，暂停，继续，停止。Windows服务的特点：在后台运行，没有用户交互，可以随Windows启动而启动。</p>
+
+<h1 id="如何实现windows服务">如何实现Windows服务？</h1>
+
+<p>下面按”隔一定时间做一些相同的事情”的服务为例，说明Windows服务如何实现。</p>
+
+<p>**1.先按普通Windows程序设计好你的程序逻辑。 **</p>
+
+<p>建立一个空白解决方案WindowsService.sln</p>
+
+<p>添加Windows类库项目ServiceBLL.csproj</p>
+
+<p>将Class1.cs改名为AppBLL.cs</p>
+
+<p>添加一个方法Dothings()，这个方法用来每隔一段时间调用一次，做些周期性的事情。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">namespace</span> ServiceBLL
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AppBLL</span>
+    {
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Dothings()
+        {
+            <span style="color:#75715e">//隔一段时间调用一次
+</span><span style="color:#75715e"></span>            LogHelper.WriteLog(<span style="color:#e6db74">&#34;test&#34;</span>);
+        }
+
+    }
+}
+</code></pre></div>
+<p>**2.向解决方案添加一个WindowsService.csproj **</p>
+
+<p><img src="http://blog-img.xuzhibin.com/2018-11-28-2010_02_28_182839.png" alt="" /></p>
+
+<p>将Service1.cs重命名为Service.cs</p>
+
+<p>给WindowsService添加ServiceBLL项目引用</p>
+
+<p>打开Service.cs代码视图，向Service类添加成员</p>
+
+<p>ServiceBLL.AppBLL appBLL;</p>
+
+<p>在构造函数里面对appBLL实例化</p>
+
+<p>appBLL= new AppBLL ();</p>
+
+<p>在using位置添加System.Theading</p>
+
+<p>using System.Threading;</p>
+
+<p>给Service类添加计时器</p>
+
+<p>Timer serviceTimer;</p>
+
+<p>添加TimeCallback方法，用于计时器调用</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> TimerCallback(<span style="color:#66d9ef">object</span> obj)
+{
+    <span style="color:#75715e">//隔一段时间调用一次
+</span><span style="color:#75715e"></span>    appBLL.Dothings();
+}
+</code></pre></div>
+<p>在OnStart()方法中添加方法，用于启动计时器</p>
+
+<p>serviceTimer = new Timer(new TimerCallback(TimerCallback), state, 0, period);</p>
+
+<p>此处，state用于保存状态，如果不需要，保存状态，可以传入null。第三个参数0表示立即调用TimerCallback方法，如果不需要立即调用，可以传入period。period是计时器的计时间隔，单位为毫秒。</p>
+
+<p>重载 OnPause ()和OnContinue ()方法，对计时器进行控制。</p>
+
+<p>Service.cs代码如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">using</span> System.ServiceProcess;
+<span style="color:#66d9ef">using</span> System.Threading;
+<span style="color:#66d9ef">using</span> ServiceBLL;
+
+<span style="color:#66d9ef">namespace</span> WindowsService
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">partial</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Service</span> : ServiceBase
+    {
+        <span style="color:#66d9ef">private</span> Timer serviceTimer;
+        <span style="color:#66d9ef">private</span> AppBLL appBLL;
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> period;
+        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">object</span> state;
+
+        <span style="color:#66d9ef">public</span> Service()
+        {
+            InitializeComponent();
+            appBLL = <span style="color:#66d9ef">new</span> AppBLL();
+
+        }
+
+        <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> OnStart(<span style="color:#66d9ef">string</span><span style="color:#a6e22e">[]</span> args)
+        {
+            <span style="color:#75715e">//启动timer
+</span><span style="color:#75715e"></span>            period = <span style="color:#ae81ff">10</span>*<span style="color:#ae81ff">1000</span>;<span style="color:#75715e">//10秒，可从配置文件中获取
+</span><span style="color:#75715e"></span>            serviceTimer = <span style="color:#66d9ef">new</span> Timer(<span style="color:#66d9ef">new</span> TimerCallback(TimerCallback), state, <span style="color:#ae81ff">0</span>, period);
+            LogHelper.WriteLog(<span style="color:#e6db74">&#34;OnStart&#34;</span>);
+        }
+
+        <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> OnStop()
+        {
+            <span style="color:#75715e">//停止计时器
+</span><span style="color:#75715e"></span>            serviceTimer.Change(Timeout.Infinite, Timeout.Infinite);
+            LogHelper.WriteLog(<span style="color:#e6db74">&#34;OnStop&#34;</span>);
+        }
+
+        <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> OnContinue()
+        {
+            <span style="color:#75715e">//重新开始计时
+</span><span style="color:#75715e"></span>            serviceTimer.Change(<span style="color:#ae81ff">0</span>, period);
+            LogHelper.WriteLog(<span style="color:#e6db74">&#34;OnContinue&#34;</span>);
+        }
+
+        <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> OnPause()
+        {
+            <span style="color:#75715e">//停止计时器
+</span><span style="color:#75715e"></span>            serviceTimer.Change(Timeout.Infinite, Timeout.Infinite);
+            LogHelper.WriteLog(<span style="color:#e6db74">&#34;OnPause&#34;</span>);
+        }
+
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> TimerCallback(<span style="color:#66d9ef">object</span> obj)
+        {
+            <span style="color:#75715e">//隔一段时间调用一次
+</span><span style="color:#75715e"></span>            appBLL.Dothings();
+        }
+
+    }
+}
+</code></pre></div>
+<p>Program.cs代码如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span>
+{
+    <span style="color:#75715e">/// &lt;summary&gt;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">/// 应用程序的主入口点。
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">/// &lt;/summary&gt;
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main()
+    {
+        ServiceBase<span style="color:#a6e22e">[]</span> ServicesToRun;
+        ServicesToRun = <span style="color:#66d9ef">new</span> ServiceBase<span style="color:#a6e22e">[]</span> 
+            { 
+                <span style="color:#66d9ef">new</span> Service() 
+            };
+        ServiceBase.Run(ServicesToRun);
+    }
+}
+</code></pre></div>
+<p>**3.将这个服务程序切换到设计视图 **</p>
+
+<p>右击设计视图选择”添加安装程序”</p>
+
+<p>切换到刚被添加的ProjectInstaller的设计视图</p>
+
+<p>设置serviceInstaller1组件的属性：</p>
+
+<p>1) ServiceName = My Sample Service</p>
+
+<p>2) StartType = Automatic (开机自动运行)</p>
+
+<p>设置serviceProcessInstaller1组件的属性 Account = LocalSystem</p>
+
+<p>**4.安装和卸载服务 **</p>
+
+<p>1) 手动安装服务</p>
+
+<p>访问项目中的已编译可执行文件所在的目录。</p>
+
+<p>用项目的输出作为参数，从命令行运行</p>
+
+<p>InstallUtil.exe。在命令行中输入下列代码：</p>
+
+<p>installutil yourproject.exe</p>
+
+<p>2) 手动卸载服务</p>
+
+<p>用项目的输出作为参数，从命令行运行</p>
+
+<p>InstallUtil.exe。在命令行中输入下列代码：</p>
+
+<p>installutil /u yourproject.exe</p>
+
+<p>另一种方法：从命令行运行 sc delete 服务名</p>
+
+<p>3)安装Windows服务的批命令如下:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">@ECHO OFF
+
+REM The following directory is for .NET2.0
+set DOTNETFX=%SystemRoot%\Microsoft.NET\Framework\v2.0.50727
+set PATH=%PATH%;%DOTNETFX%
+
+cd\
+cd &#34;H:\Net_Work\Madnet\Demo\WindowsService\WindowsService\bin\Debug&#34;
+
+echo 正在安装 测试服务...
+echo ---------------------------------------------------
+
+InstallUtil /i WindowsService.exe
+echo ---------------------------------------------------
+
+echo Done.
+exit</pre></div>
+<p>4)卸载Windows服务的批命令如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">@ECHO OFF
+
+REM The following directory is for .NET2.0
+set DOTNETFX=%SystemRoot%\Microsoft.NET\Framework\v2.0.50727
+set PATH=%PATH%;%DOTNETFX%
+
+cd\
+cd &#34;H:\Net_Work\Madnet\Demo\WindowsService\WindowsService\bin\Debug&#34;
+
+echo 正在卸载 测试服务...
+echo ---------------------------------------------------
+
+InstallUtil /U WindowsService.exe
+
+echo ---------------------------------------------------
+
+echo Done.
+exit</pre></div>
+<p><strong>5.调试服务</strong></p>
+
+<p>1)安装您的服务。</p>
+
+<p>2)可从服务控制管理器、”服务器资源管理器”或代码启动服务。</p>
+
+<p>3) 用Visual Studio装载这个项目，从”调试”菜单中选择”进程”。出现”进程”对话框。</p>
+
+<p>4)单击”显示系统进程”。</p>
+
+<p>5)在”可用进程”区域内单击服务的进程，然后单击”附加”。（提示 此进程将与服务的可执行文件同名。）出现”附加到进程”对话框。</p>
+
+<p>6)选择任意适当选项，然后单击”确定”关闭对话框。（注意 您现在已处于调试模式。）</p>
+
+<p>7)设置要在代码中使用的任意断点。</p>
+
+<p>8)访问服务控制管理器并操纵您的服务，并发送停止、暂停和继续命令以命中您的断点</p>
+
+<p><img src="http://blog-img.xuzhibin.com/2018-11-28-2010_02_28_201257.png" alt="" /></p>
+
+<p><a href="http://xuzhibin.com/uploads/net-winservice/WindowsService.rar">源文件下载</a></p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="http://xuzhibin.com/tags/service" rel="tag" title="service">#service#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://xuzhibin.com/post/install-crontab/" rel="next" title="CentOS安装crontab及使用方法">
+        <i class="fa fa-chevron-left"></i> CentOS安装crontab及使用方法
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://xuzhibin.com/post/web-architecture/" rel="prev" title="大规模网站架构">
+        大规模网站架构 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://xuzhibin.com/images/avatar.png"
+        alt="jabin" />
+    <p class="site-author-name" itemprop="name">jabin</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://xuzhibin.com/post/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://xuzhibin.com/categories/">      
+         
+        <span class="site-state-item-count">12</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://xuzhibin.com/tags/">
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="" target="_blank" title="">
+            <i class="fa fa-fw fa-"></i>
+            
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="" target="_blank" title="">
+            <i class="fa fa-fw fa-"></i>
+            
+        </a>
+        </span>
+    
+</div>
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2008 - 2019</span>
+  <span class="with-love"><i class="fa fa-user"></i></span>
+  <span class="author" itemprop="copyrightHolder">狂人居</span>
+</div>
+
+
+
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.1</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+<div class="theme-info">
+| <a href="http://www.miitbeian.gov.cn/">粤ICP备17022455号-1</a> | <a href="http://www.miitbeian.gov.cn/">粤ICP备17022455号-2</a> 
+</div>
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://xuzhibin.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://xuzhibin.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/utils.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/motion.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/affix.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/search.js"></script>
+
+<script src="http://xuzhibin.com/js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

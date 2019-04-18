@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件架构 on 狂人居</title>
+    <link>http://xuzhibin.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/</link>
+    <description>Recent content in 软件架构 on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 25 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>软件的困境</title>
+      <link>http://xuzhibin.com/thoughts/2017/0925_soft_dilemma/</link>
+      <pubDate>Mon, 25 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/thoughts/2017/0925_soft_dilemma/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://xuzhibin.com/images/y17/soft_rm_.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;最近我司的软件产品线面临其史上最大的因境，今天晚上坐班车时，与一位曾经共过事的同事，聊起现在的软件，感慨颇多。大家都认为我们镨过太多的机会点，现在面对互联网软件的直面冲击，以及运营商本身经营上的乏力，运营商这个领域的软件已经无力回天了。另外之前与其它的同事也聊过，我司本质是一家硬件公司，没有做软件的基因。凭着做硬件的套路，做了这么多年的软件产品，也实属于不容易了。做软件产品与做软件服务是完全不同的套路，软件产品是需要卖给不同的客户，交付形态存在多样化，定制不可避免。而卖服务给不同的客户，客户关注是的服务体验，并不太关心软件的本身，只要软件能搞定客户的问题就行，就不会像卖产品那样面临不同的交付形态问题。而目前我们最大的因境就是软件产品不具有可复制性，不能像硬件那样形成规模效应。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>思维图形化</title>
+      <link>http://xuzhibin.com/thoughts/2016/1118_arch_drawing/</link>
+      <pubDate>Fri, 18 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/thoughts/2016/1118_arch_drawing/</guid>
+      <description>&lt;p&gt;曾经，我幼稚地认为：只有写好代码才能对产品最“大”的贡献。什么需求分析文档，架构设计文档，没有最终的代码落地，那就是一张张的空纸。那些职位高高在上的架构师们，就也是写写胶片，画画图，他们又不懂技术细节，天天开会讨论来，讨论去都是在空谈一切。没有我们这些屌丝写的代码，你让他们去实现，估计几年也搞不出来。我写代码的能力比他们顶上N个人；再看看人家老外，60/70岁了还在码代码。为什么我国到了30岁了，都不去写代码了，都去搞所谓的架构设计了。是他们写代码写不好才去干架构师活吗？&lt;/p&gt;
+
+&lt;p&gt;经过这么多年在产品中挖坑、填坑，发现我们的产品是越来越复杂，但使用上也是越来越复杂，问题也是越来越难理清。我们的问题到底是出在什么地方：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>软件架构一些感想</title>
+      <link>http://xuzhibin.com/thoughts/2016/0319_arch_diathesis/</link>
+      <pubDate>Sat, 19 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/thoughts/2016/0319_arch_diathesis/</guid>
+      <description>&lt;h2 id=&#34;软件架构&#34;&gt;软件架构&lt;/h2&gt;
+
+&lt;p&gt;软件系统架构不只是软件本身架构，它是一个全系统、全网络的架构，从层次上由低到高分为：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;程序架构&lt;/li&gt;
+&lt;li&gt;系统架构&lt;/li&gt;
+&lt;li&gt;产品架构&lt;/li&gt;
+&lt;li&gt;生态、商业模式的架构&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;任何一个架构师，都是需要重点解决某方面的尖锐问题，同时避免在不合适的场景下，一种技术、一类框架或一种架构模式被滥用。架构就需要对整体框定好范围与约束。&lt;/p&gt;
+
+&lt;p&gt;架构设计不可能面面俱到，要解决或是发挥关键路径上的资源合理有效的最大价值。一个好的架构，不会随着时间或业务的变换，而需要进行大的破坏性的变化。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

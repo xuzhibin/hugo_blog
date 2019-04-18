@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>广告 on 狂人居</title>
+    <link>http://xuzhibin.com/tags/%E5%B9%BF%E5%91%8A/</link>
+    <description>Recent content in 广告 on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 15 Oct 2008 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/%E5%B9%BF%E5%91%8A/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>一段广告加载代码</title>
+      <link>http://xuzhibin.com/post/2008/adload/</link>
+      <pubDate>Wed, 15 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2008/adload/</guid>
+      <description>var arr = { &amp;#34;default&amp;#34; : &amp;#34;http://dpvc.39.net/adpolestar/door/;ap=5E30CD32_CA9F _8CC4_BD09_09CE939700E0;ct=if;pu=san9;/?&amp;#34; } var Html = { load: function() { var s=document.getElementById(&amp;#34;show_drug&amp;#34;); if(typeof(s)==&amp;#34;undefined&amp;#34;||s==null) return arr[&amp;#34;default&amp;#34;]; var code = s.src.replace(/^.+\?/,&amp;#39;&amp;#39;); code=decodeURI(code); if(typeof(arr[code])!=&amp;#34;undefined&amp;#34;) return arr[code]; var index; while((index=code.lastIndexOf(&amp;#39;_&amp;#39;))!=-1){ code=code.substring(0,index); if(typeof(arr[code])!=&amp;#34;undefined&amp;#34;) { return arr[code]; } } return arr[&amp;#34;default&amp;#34;]; } } document.getElementById(&amp;#34;drug_tl&amp;#34;).innerHTML = &amp;#34;&amp;lt;iframe SRC=&amp;#39;&amp;#34;+Html.load()+&amp;#34;&amp;#39; NAME=&amp;#39;adFrame&amp;#39; WIDTH=&amp;#39;970&amp;#39; HEIGHT=&amp;#39;90&amp;#39; FRAMEBORDER=&amp;#39;no&amp;#39; BORDER=&amp;#39;0&amp;#39; MARGINWIDTH=&amp;#39;0&amp;#39; MARGINHEIGHT=&amp;#39;0&amp;#39; SCROLLING=&amp;#39;no&amp;#39;&amp;gt;&amp;lt;/iframe&amp;gt;&amp;#34;; 注：show_drug为js i</description>
+    </item>
+    
+  </channel>
+</rss>

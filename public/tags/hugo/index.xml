@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hugo on 狂人居</title>
+    <link>http://xuzhibin.com/tags/hugo/</link>
+    <description>Recent content in hugo on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 16 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>博客转为hugo</title>
+      <link>http://xuzhibin.com/post/2019/hugo-install/</link>
+      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2019/hugo-install/</guid>
+      <description>&lt;p&gt;hexo生成速度越来越慢了，决定转为hugo，hugo安装使用简单，不过模板数量和质量的确和hexo有差距。&lt;/p&gt;
+
+&lt;p&gt;hugo生成速度非常快，以前hexo生成站点要10几秒，hugo在1秒以内。&lt;/p&gt;
+
+&lt;h1 id=&#34;安装&#34;&gt;安装&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.gohugo.org&#34;&gt;Hugo中文文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/xtfly/hugo-theme-next&#34;&gt;Next模板&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.olowolo.com/post/hugo-quick-start/#url管理&#34;&gt;Hugo 从入门到会用&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>elasticsearch on 狂人居</title>
+    <link>http://xuzhibin.com/tags/elasticsearch/</link>
+    <description>Recent content in elasticsearch on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 06 Sep 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ElasticSearch入门笔记</title>
+      <link>http://xuzhibin.com/post/2012/elasticsearch-getstart/</link>
+      <pubDate>Thu, 06 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2012/elasticsearch-getstart/</guid>
+      <description>ElasticSearch 是构建在Apache Lucene之上的的搜索引擎服务，开源（Apache2协议），分布式，RESTful。安装方便，使用简单。 官方站点：h</description>
+    </item>
+    
+  </channel>
+</rss>

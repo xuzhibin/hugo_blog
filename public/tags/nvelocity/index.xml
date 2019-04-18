@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nvelocity on 狂人居</title>
+    <link>http://xuzhibin.com/tags/nvelocity/</link>
+    <description>Recent content in nvelocity on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 18 Apr 2009 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/nvelocity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NVelocity直接使用字符串模板</title>
+      <link>http://xuzhibin.com/post/2009/nvelocity-demo/</link>
+      <pubDate>Sat, 18 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2009/nvelocity-demo/</guid>
+      <description>using System; using System.IO; using System.Collections; using System.Collections.Generic; using NVelocity; using NVelocity.App; namespace ConsoleApplication1 { class Program { static void Main(string[] args) { string templates = &amp;#34;Hi $name $surname, The date is $date.&amp;#34;; Dictionary oo = new Dictionary(); oo.Add(&amp;#34;name&amp;#34;, &amp;#34;Joe&amp;#34;); oo.Add(&amp;#34;surname&amp;#34;, &amp;#34;Smith&amp;#34;); oo.Add(&amp;#34;date&amp;#34;, DateTime.Now.ToString(&amp;#34;D&amp;#34;)); Console.WriteLine(Fill(templates,oo)); Console.ReadLine(); } static public string Fill(string template, IDictionary values) { var engine = new VelocityEngine(); engine.Init(); var context = new VelocityContext(); if (values != null)</description>
+    </item>
+    
+  </channel>
+</rss>

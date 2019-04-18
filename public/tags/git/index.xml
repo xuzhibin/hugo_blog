@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on 狂人居</title>
+    <link>http://xuzhibin.com/tags/git/</link>
+    <description>Recent content in git on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 07 Nov 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git 常用命令速查表</title>
+      <link>http://xuzhibin.com/post/2013/git-command/</link>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2013/git-command/</guid>
+      <description>配置 $ git config --global user.name &amp;#34;John Doe&amp;#34; $ git config --global user.email johndoe@example.com 创建版本库 $ git clone [url] #克隆远程版本库 $ git clone git://github.com/schacon/grit.git $ git clone git://github.com/schacon/grit.git mygrit $ git clone --bare my_project my_project.git #创建纯仓库 $ git init #初始化本地版本库 $ git init --bare #</description>
+    </item>
+    
+  </channel>
+</rss>

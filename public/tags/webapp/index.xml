@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webapp on 狂人居</title>
+    <link>http://xuzhibin.com/tags/webapp/</link>
+    <description>Recent content in webapp on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 02 Dec 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/webapp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>移动WebApp开发记录</title>
+      <link>http://xuzhibin.com/post/2011/webapp-devlog/</link>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2011/webapp-devlog/</guid>
+      <description>这段时间在做移动WebApp开发，基于PhoneGap+Jquery Mobile，遇到不少问题，下面进行部分总结。 1.webStorage有</description>
+    </item>
+    
+  </channel>
+</rss>

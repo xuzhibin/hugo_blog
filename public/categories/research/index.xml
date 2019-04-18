@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>research on 狂人居</title>
+    <link>http://xuzhibin.com/categories/research/</link>
+    <description>Recent content in research on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 11 Nov 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/categories/research/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>网页正文提取算法研究[非正则]</title>
+      <link>http://xuzhibin.com/post/2010/text-extraction/</link>
+      <pubDate>Thu, 11 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2010/text-extraction/</guid>
+      <description>互联网的页面展现形式相当丰富，但是如果按页面结构特征来分类，却不外乎以下几种类型：首页（包括栏目首页），列表页，内容页，评论页。 (1) **首页:</description>
+    </item>
+    
+    <item>
+      <title>大规模网站架构</title>
+      <link>http://xuzhibin.com/post/2009/web-architecture/</link>
+      <pubDate>Wed, 16 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2009/web-architecture/</guid>
+      <description>以下并非所有都经过本人实践,部分为根据资料的假想所得,切勿贯彻本本主义。 网站架构目标 高可用性(High Availability) 可伸缩性(Scalability) 高</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端 on 狂人居</title>
+    <link>http://xuzhibin.com/categories/%E5%89%8D%E7%AB%AF/</link>
+    <description>Recent content in 前端 on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 29 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>React &#43; Electron 搭建一个桌面应用[转]</title>
+      <link>http://xuzhibin.com/post/2018/electron-react/</link>
+      <pubDate>Thu, 29 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2018/electron-react/</guid>
+      <description>&lt;p&gt;当你冲这个标题点进来的时候，我猜你一定知道 React 是什么，更多详情请&lt;a href=&#34;https://react.docschina.org&#34;&gt;戳这里&lt;/a&gt;，就不介绍React了，一个神般存在的前端框架。另外，浏览器和移动端横行的时代，为什么还需要桌面应用？我就不解释了，反正优点很多，做为技术多学一点总没错。&lt;/p&gt;
+
+&lt;h2 id=&#34;electron-简单介绍&#34;&gt;Electron 简单介绍&lt;/h2&gt;
+
+&lt;h3 id=&#34;是什么&#34;&gt;是什么?&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://link.juejin.im/?target=https%3A%2F%2Felectronjs.org%2Fdocs%2Ftutorial%2Fabout&#34;&gt;官网&lt;/a&gt;是这么介绍的：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://link.juejin.im/?target=https%3A%2F%2Felectronjs.org%2F&#34;&gt;Electron&lt;/a&gt;is an open source library developed by GitHub for building cross-platform desktop applications with HTML, CSS, and JavaScript. Electron accomplishes this by combining &lt;a href=&#34;https://link.juejin.im/?target=https%3A%2F%2Fwww.chromium.org%2FHome&#34;&gt;Chromium&lt;/a&gt;and &lt;a href=&#34;https://link.juejin.im/?target=https%3A%2F%2Fnodejs.org%2F&#34;&gt;Node.js&lt;/a&gt;into a single runtime and apps can be packaged for Mac, Windows, and Linux.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;简单翻译一下就是：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;​&lt;a href=&#34;https://link.juejin.im/?target=https%3A%2F%2Felectron.atom.io%2F&#34;&gt;Electron&lt;/a&gt;是一个由 GitHub 开发的开源库，通过将 &lt;a href=&#34;https://link.juejin.im/?target=https%3A%2F%2Fwww.chromium.org%2FHome&#34;&gt;Chromium&lt;/a&gt;) 和&lt;a href=&#34;https://link.juejin.im/?target=https%3A%2F%2Fnodejs.org%2F&#34;&gt;Node.js&lt;/a&gt;组合并使用 HTML，CSS 和 JavaScript 进行构建 Mac，Windows，和 Linux 跨平台桌面应用程序。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;隐藏意思：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;让前端开发者快乐简单拥抱桌面应用！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

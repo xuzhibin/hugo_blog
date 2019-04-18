@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysql on 狂人居</title>
+    <link>http://xuzhibin.com/tags/mysql/</link>
+    <description>Recent content in mysql on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 17 Aug 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Linux下重置MySQL root密码</title>
+      <link>http://xuzhibin.com/post/2013/reset-mysql-rootpass/</link>
+      <pubDate>Sat, 17 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2013/reset-mysql-rootpass/</guid>
+      <description>1、停止MySQL服务 执行： /etc/init.d/mysql stop 你的机器上也不一定是/etc/init.d/mysql，也可能是/etc/init.d/mysqld 2、跳过</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,459 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>网页正文提取算法研究[非正则] - 狂人居</title>
+    <meta name="keywords" content="博客,程序员,架构师,个人,思考,读书,笔记,技术,分享,PHP">
+    
+    <meta property="og:title" content="网页正文提取算法研究[非正则]">
+    <meta property="og:site_name" content="狂人居">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="网页正文提取算法研究[非正则] - 狂人居" />
+    <meta name="description" content="博客 | 软件 | 架构 | PHP | Python"> 
+    
+    <link rel="shortcut icon" href="http://xuzhibin.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://xuzhibin.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://xuzhibin.com/img/apple-touch-icon.png" />
+    <link href="http://xuzhibin.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/css/syntax.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="http://xuzhibin.com/js/highlight/styles/a11y-dark.css">
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://xuzhibin.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">狂人居</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">路漫漫其修远兮,吾将上下而求索</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/categories/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/tags/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/development/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-star"></i> <br />开发
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/resume/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-thumbs-up"></i> <br />Resume
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://xuzhibin.com/post/2010/text-extraction/" itemprop="url">
+        网页正文提取算法研究[非正则]
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2010-11-11">
+    2010-11-11
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://xuzhibin.com/categories/research" itemprop="url" rel="index">
+        <span itemprop="name">research</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2388 字 ~5分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>互联网的页面展现形式相当丰富，但是如果按页面结构特征来分类，却不外乎以下几种类型：首页（包括栏目首页），列表页，内容页，评论页。</p>
+
+<p>(1) **首页: **网站的首页, 一般含有多个栏目、图片、动画,以及若干文章标题链接。如: 网易首页。</p>
+
+<p>(2) <strong>列表页:</strong> 信息以列表的方式给出, 一般以表格的形式列出若干个条目, 经常含有分页功能。例如: 某论坛版面的文章标题列表。</p>
+
+<p>(3) <strong>内容页:</strong> 指含有正文内容的底层网页, 一般只含有不超过一篇的文章内容, 无评论或评论较少。如: 各类网站的含有具体某篇文章的底层网页。</p>
+
+<p>(4) **评论页: **除了含有正文, 正文后面还跟有若干个评论,以论坛为代表。</p>
+
+<p>在这几种类型之中，信息含量最大的当数内容页，它是我们平常摄取信息的主要来源。由于内容页的重要性，不同的Web站点为了加强内容页的展示，都会加入一些与内容相关或无关的信息块，如导航，广告等。虽然这些信息块在一定程度上有助于我们的延伸阅读，但很多情况下，我们只需要获取正文信息就可以了，其他信息块反倒成了一种干扰。如何从一个内容页面中，正确提取出正文信息，就成了一个研究课题。</p>
+
+<p>在详述之前，先说一下正文提取的意义。以笔者的经历看来，应用包括但不限于以下几个方面。</p>
+
+<p>(1) <strong>采集，搜索。</strong>信息采集很常见，互联网上超过30%的内容都是从其他Web站点采集而来。现在的采集系统或工具，大多是基于页面的正则来进行信息采集的，这样的优点是，对于需要采集的信息精确度很高，但是缺点也是很明显的，由于是基于页面的Html源码来采集，一旦源站点改版或调整，导致页面的Html源码改变，所有正则将全部作废。而正文提取技术，不是以Html源码格式为依据，所以Html源码的改变相对来说影响不大。</p>
+
+<p>(2) <strong>门户文章发布。</strong>很多门户站点，并没有专门的记者团队，大部分文章都靠编辑在网上复制粘贴。如果能在发布界面加个功能，只需要输入网址，即可正确导入正文内容，并自动处理图片，想必是个不错的用户体验。</p>
+
+<p>(3)<strong>Wap浏览器。</strong>Wap浏览由于受到流量及手机屏幕的限制，现在的Wap页面大部分以特出文字信息为主，但也不排除会有一些干扰信息块出现。作为用户，希望能只显示正文信息，特别是对于新闻及小说等页面。Wap浏览器如果可以将正文内容自动提取出来，应该是个不错功能。Android系统的迷人浏览器有个阅读模式，算是在这方面的一个探索。</p>
+
+<p>正文提取技术的算法很多，本文是基于多特征的一种算法研究，根据信息块的特征进行判定。内容页又称为主题页，主题内容通常可以分解层次为: ①标题; ②发布时间; ③内容正文; ④相关文章或延伸性阅读。除了“内容正文”为必须元素外，其他几个元素都不一定会在内容页出现。根据对大量不同网页观察，各个元素的位置及表现形式虽无固定的标准，但是大部分却满足一定的特征。</p>
+
+<p><strong>一．标题块</strong></p>
+
+<ul>
+<li>分块节点：td，div，h，span</li>
+<li>一般位于Head/Title的位置</li>
+<li>当前单元含有<code>&lt;h1&gt;</code>-<code>&lt;h3&gt;</code>，<code>&lt;b&gt;</code>，<code>&lt;i&gt;</code>，<code>&lt;strong&gt;</code>等标签</li>
+<li>样式，一般class包含title，head等字符</li>
+<li>文字长度，一般大于3个字符，小于35个字符</li>
+</ul>
+
+<p><strong>二．发表时间块</strong></p>
+
+<ul>
+<li>分块节点：td，div， span</li>
+<li>文字长度，一般小于50个字符</li>
+<li>包含日期格式（2010-08-09）的字符串</li>
+<li>包含以下关键字：来源，发表</li>
+</ul>
+
+<p><strong>三．主题块</strong></p>
+
+<ul>
+<li>分块节点：td，div</li>
+<li>HTML网页中有一些特殊标签，通常只出现在网页主题块中，如<code>&lt;P&gt;</code> <code>&lt;BR&gt;</code>等。因此，主题块中往往包含着特殊标签。</li>
+<li>主题块内容含有较多的句子，因此具有较多逗号、句号等标点符号（&gt;5）。</li>
+<li>若从信息量角度考虑，主题块一般是含有较多文字信息。</li>
+<li>主题块的 标签密度=1000*标签数/文字数 应在小于一个范围。</li>
+<li>主题块的 文本密度=len(文本)/len(HTML代码) 较大</li>
+<li>不应该包含 “上一篇”，“下一篇”</li>
+<li>包含以下字符串的内容块，判定为包含版权信息，需减权：“ICP备04000001号”，“版权所有”，“Copyright”</li>
+<li>主题块序号在标题块之下</li>
+<li>主题块序号在发表时间块之下</li>
+<li>主题块序号在相关链接块之上</li>
+</ul>
+
+<p><strong>四．相关链接块</strong></p>
+
+<ul>
+<li>分块节点：td，div</li>
+<li>文字应为“相关链接”、“相关新闻”、“相关报道”等敏感词，且连接比例很高。</li>
+<li>链接数小于20</li>
+</ul>
+
+<p><strong>实现：</strong></p>
+
+<p>根据以上信息块特征，采用特征提权算法，C#（3.5）编程实现，命名为QD正文提取组件。经测试，对Html格式规范的以文字为主的内容页，正确提取率在85%以上，各大门户的新闻页面在95%以上。</p>
+
+<p><a href="http://xuzhibin.com/uploads/text-extraction/SimpleExtract.rar">例子下载</a>(需要安装Microsoft .NET Framework 3.5)</p>
+
+<p><img src="http://blog-img.xuzhibin.com/2018-11-28-081020.gif" alt="正文提取例子" /></p>
+
+<blockquote>
+<p>注：QD正文提取组件 不开源，需要源码的朋友可选择付费获取。</p>
+</blockquote>
+
+<p>例子程序最新版本为 1.0.4.0</p>
+
+<blockquote>
+<p><strong>所售源码包文件列表</strong></p>
+
+<p>组件源代码1份 (C#)</p>
+
+<p>例子程序1个 (源码，运行界面见上图)</p>
+
+<p>正文提取相关论文，找人到学校收费论文库下的，压缩包大概几十M</p>
+
+<p>CAJViewer软件1个，看某些论文需要用到。</p>
+</blockquote>
+
+<p><strong>针对近期部分朋友的咨询，答复如下：</strong></p>
+
+<p>1.物价高涨，生活不容易，砍价亦麻烦，组件源码价格调整为￥300，此为底线，不再接受议价。</p>
+
+<p>2.购买前，请先确定此组件对你是有价值的，以免浪费金钱。</p>
+
+<p>3.由于程序源码的特殊性，不提供退货服务，请谅解。源码的效果与例子程序是一模一样的，请先下载例子程序测试，看看是否能满足你的要求，当然，你亦可通过对源码的修改（增改规则），以获得更好的效果。</p>
+
+<p>4.程序的思路已写在此，时间比较充裕的朋友，建议自己编写程序。真需要购买的，偶亦很欢迎，但购买前请参照以上1~3条。</p>
+
+<p>5.有意购买者，可联系Email：171630607@qq.com，QQ：171630607。<strong>请尊重劳动成果，勿传播源码。</strong></p>
+
+<p>6.有朋友说，例子程序在WIN7 64bit上无法运行。经测试，例子程序在XP、WIN7 32bit可以运行，WIN7 64bit和WIN8 64bit不能运行。原因是例子程序做了加密处理，未经加密的源码在以上系统均可正常运行。</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="http://xuzhibin.com/tags/text-extraction" rel="tag" title="text extraction">#text extraction#</a>
+    
+    <a href="http://xuzhibin.com/tags/%e6%ad%a3%e6%96%87%e6%8a%bd%e5%8f%96" rel="tag" title="正文抽取">#正文抽取#</a>
+    
+    <a href="http://xuzhibin.com/tags/%e6%ad%a3%e6%96%87%e6%8f%90%e5%8f%96" rel="tag" title="正文提取">#正文提取#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://xuzhibin.com/post/2011/iptables-blockip/" rel="next" title="iptables封ip段的一些常见命令">
+        <i class="fa fa-chevron-left"></i> iptables封ip段的一些常见命令
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://xuzhibin.com/post/2010/lucenenet-getstart/" rel="prev" title="Lucene.Net入门基础">
+        Lucene.Net入门基础 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://xuzhibin.com/images/avatar.png"
+        alt="jabin" />
+    <p class="site-author-name" itemprop="name">jabin</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://xuzhibin.com/post/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://xuzhibin.com/categories/">      
+         
+        <span class="site-state-item-count">12</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://xuzhibin.com/tags/">
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="" target="_blank" title="">
+            <i class="fa fa-fw fa-"></i>
+            
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="" target="_blank" title="">
+            <i class="fa fa-fw fa-"></i>
+            
+        </a>
+        </span>
+    
+</div>
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2008 - 2019</span>
+  <span class="with-love"><i class="fa fa-user"></i></span>
+  <span class="author" itemprop="copyrightHolder">狂人居</span>
+</div>
+
+
+
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.1</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+<div class="theme-info">
+| <a href="http://www.miitbeian.gov.cn/">粤ICP备17022455号-1</a> | <a href="http://www.miitbeian.gov.cn/">粤ICP备17022455号-2</a> 
+</div>
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://xuzhibin.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://xuzhibin.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/utils.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/motion.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/affix.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/search.js"></script>
+
+<script src="http://xuzhibin.com/js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

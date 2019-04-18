@@ -1,0 +1,646 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>React &#43; Electron 搭建一个桌面应用[转] - 狂人居</title>
+    <meta name="keywords" content="博客,程序员,架构师,个人,思考,读书,笔记,技术,分享,PHP">
+    
+    <meta property="og:title" content="React &#43; Electron 搭建一个桌面应用[转]">
+    <meta property="og:site_name" content="狂人居">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="React &#43; Electron 搭建一个桌面应用[转] - 狂人居" />
+    <meta name="description" content="博客 | 软件 | 架构 | PHP | Python"> 
+    
+    <link rel="shortcut icon" href="http://xuzhibin.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://xuzhibin.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://xuzhibin.com/img/apple-touch-icon.png" />
+    <link href="http://xuzhibin.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/css/syntax.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="http://xuzhibin.com/js/highlight/styles/a11y-dark.css">
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://xuzhibin.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">狂人居</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">路漫漫其修远兮,吾将上下而求索</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/categories/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/tags/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/development/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-star"></i> <br />开发
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/resume/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-thumbs-up"></i> <br />Resume
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://xuzhibin.com/post/2018/electron-react/" itemprop="url">
+        React &#43; Electron 搭建一个桌面应用[转]
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2018-11-29">
+    2018-11-29
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://xuzhibin.com/categories/%E5%89%8D%E7%AB%AF" itemprop="url" rel="index">
+        <span itemprop="name">前端</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2628 字 ~6分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>当你冲这个标题点进来的时候，我猜你一定知道 React 是什么，更多详情请<a href="https://react.docschina.org">戳这里</a>，就不介绍React了，一个神般存在的前端框架。另外，浏览器和移动端横行的时代，为什么还需要桌面应用？我就不解释了，反正优点很多，做为技术多学一点总没错。</p>
+
+<h2 id="electron-简单介绍">Electron 简单介绍</h2>
+
+<h3 id="是什么">是什么?</h3>
+
+<p><strong><a href="https://link.juejin.im/?target=https%3A%2F%2Felectronjs.org%2Fdocs%2Ftutorial%2Fabout">官网</a>是这么介绍的：</strong></p>
+
+<p><a href="https://link.juejin.im/?target=https%3A%2F%2Felectronjs.org%2F">Electron</a>is an open source library developed by GitHub for building cross-platform desktop applications with HTML, CSS, and JavaScript. Electron accomplishes this by combining <a href="https://link.juejin.im/?target=https%3A%2F%2Fwww.chromium.org%2FHome">Chromium</a>and <a href="https://link.juejin.im/?target=https%3A%2F%2Fnodejs.org%2F">Node.js</a>into a single runtime and apps can be packaged for Mac, Windows, and Linux.</p>
+
+<p><strong>简单翻译一下就是：</strong></p>
+
+<p>​<a href="https://link.juejin.im/?target=https%3A%2F%2Felectron.atom.io%2F">Electron</a>是一个由 GitHub 开发的开源库，通过将 <a href="https://link.juejin.im/?target=https%3A%2F%2Fwww.chromium.org%2FHome">Chromium</a>) 和<a href="https://link.juejin.im/?target=https%3A%2F%2Fnodejs.org%2F">Node.js</a>组合并使用 HTML，CSS 和 JavaScript 进行构建 Mac，Windows，和 Linux 跨平台桌面应用程序。</p>
+
+<p><strong>隐藏意思：</strong></p>
+
+<p>让前端开发者快乐简单拥抱桌面应用！</p>
+
+<h3 id="原理是"><strong>原理是?</strong></h3>
+
+<p>上面已将说了，<a href="https://link.juejin.im/?target=https%3A%2F%2Felectron.atom.io%2F">Electron</a>通过将 <a href="https://link.juejin.im/?target=https%3A%2F%2Fwww.chromium.org%2FHome">Chromium</a>和 <a href="https://link.juejin.im/?target=https%3A%2F%2Fnodejs.org%2F">Node.js</a>组合到单个 runtime 中来实现的。</p>
+
+<p><strong>node.js:</strong></p>
+
+<p>如果你不知道 node.js，那还等什么快<a href="https://link.juejin.im/?target=https%3A%2F%2Fnodejs.org%2Fen%2F">戳这里</a>，看一看世界上最温柔可爱的语言。它借助于 Google 的 V8 引擎，<strong>Node.js</strong>是一个能够在服务器端运行 JavaScript 的开放源代码、跨平台 JavaScript 运行环境，更多解释请<a href="https://link.juejin.im/?target=https%3A%2F%2Fzh.wikipedia.org%2Fwiki%2FNode.js">戳维基百科</a>。</p>
+
+<p><strong>Chromium:</strong></p>
+
+<p>Chromium 或许你没听说过，但是你一定听说过 chrome 吧！Chromium 是 Google 的开源浏览器，是 chrome 背后的那个不太稳定更新快的兄弟版，详情<a href="https://link.juejin.im/?target=https%3A%2F%2Fwww.chromium.org%2FHome">戳这里</a>。</p>
+
+<p><strong>组合:</strong></p>
+
+<p>Electron 创建的应用使用网页作为其 GUI ,因此你可以将其当成由 JavaScript 控制的迷你精简版Chromium 浏览器。也可以将 Electron 当成 node.js 变体，只不过它更专注于桌面应用而非 Web 服务器。在 Electron 中, 把 <code>package.json</code>中设定的 <code>main</code>脚本的所在进程称为 <strong>主进程</strong>。这个进程中运行的脚本也可通过创建网页这种方式来展现其 GUI。 因为 Electron 是通过 Chromium 来显示页面,所以 Chromium 自带的多进程架构也一同被利用。这样每个页面都运行着一个独立的进程,它们被统称为 <strong>渲染进程</strong>。通常来说,浏览器中的网页会被限制在沙盒环境中运行并且不允许访问系统原生资源。但是由于 Eelectron 用户可在页面中调用 Node.js API，所以可以和底层操作系统直接交互。</p>
+
+<h3 id="优缺点"><strong>优缺点？</strong></h3>
+
+<p>总之，优点肯定大于缺点。</p>
+
+<p><strong>优点:</strong></p>
+
+<p>方便快捷的开发桌面应用，跨平台，对前端开发者友好，活跃的社区，丰富的api&hellip;&hellip;</p>
+
+<p><strong>缺点:</strong></p>
+
+<p>性能肯定比不上原生的桌面应用，发布的包貌似有一点点大。</p>
+
+<h3 id="怎么开始"><strong>怎么开始?</strong></h3>
+
+<p>如果不是假前端，那么你电脑肯定安装好了 git 和 node。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># github上有一个 electron-quick-start 仓库克隆下来</span>
+git clone https://github.com/electron/electron-quick-start
+<span style="color:#75715e"># 进入文件夹</span>
+cd electron-quick-start
+<span style="color:#75715e"># 安装依赖包并运行</span>
+npm install <span style="color:#f92672">&amp;&amp;</span> npm start</code></pre></div>
+<p>然后，你桌面应用就创建成功了如下图所示！</p>
+
+<p><img src="http://blog-img.xuzhibin.com/2018-11-29-142519.png" alt="" /></p>
+
+<p>打开你的 electron-quick-start 文件夹，你的项目结构如下图：</p>
+
+<p><img src="http://blog-img.xuzhibin.com/2018-11-29-142520.png" alt="" /></p>
+
+<p>其中，main.js 是你的启动文件，index.html 是你的入口文件。</p>
+
+<h2 id="react-结合-electron">React 结合 Electron</h2>
+
+<p>上面简单的介绍了一下 Electron，下面介绍一下如何将 React 和 Electron 结合起来。</p>
+
+<h3 id="创建一个react项目"><strong>创建一个React项目</strong></h3>
+
+<p>首先你得有一个 React 项目，由于太多繁琐的配置和懒惰的自己，我们这里就用 Facebook 提供的 create-react-app 来快速创建一个 knownsec-fed 项目。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 安装 create-react-app 命令,如果已将安装请忽略</span>
+npm install -g create-react-app
+<span style="color:#75715e"># 创建 knownsec-fed 项目</span>
+create-react-app knownsec-fed
+<span style="color:#75715e"># 启动项目( create-react-app 真的超级方便啊)</span>
+cd knownsec-fed <span style="color:#f92672">&amp;&amp;</span> npm start</code></pre></div>
+<p>于是，浏览器 <a href="http://localhost:3000/">http://localhost:3000/</a> 就会出现着如下图界面，一个 react 项目创建成功：</p>
+
+<p><img src="http://blog-img.xuzhibin.com/2018-11-29-142521.png" alt="" /></p>
+
+<h3 id="添加-electron-包">添加 Electron 包</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 在knownsec-fed 目录下安装 Electron 包</span>
+npm install -save electron</code></pre></div>
+<h3 id="相关配置">相关配置</h3>
+
+<h4 id="配置-main-js"><strong>配置 main.js</strong></h4>
+
+<p>knownsec-fed 根目录(不是 src 目录)下面新建 main.js 文件,这个文件和 electron-quick-start 中的官方默认 main.js 几乎一模一样，只修改了加载应用这入口这一个地方：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 引入electron并创建一个Browserwindow
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> {<span style="color:#a6e22e">app</span>, <span style="color:#a6e22e">BrowserWindow</span>} <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;electron&#39;</span>)
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">url</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;url&#39;</span>)
+
+<span style="color:#75715e">// 保持window对象的全局引用,避免JavaScript对象被垃圾回收时,窗口被自动关闭.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">mainWindow</span>
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createWindow</span> () {
+<span style="color:#75715e">//创建浏览器窗口,宽高自定义具体大小你开心就好
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">mainWindow</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">BrowserWindow</span>({<span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">800</span>, <span style="color:#a6e22e">height</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">600</span>})
+
+  <span style="color:#75715e">/* 
+</span><span style="color:#75715e">   * 加载应用-----  electron-quick-start中默认的加载入口
+</span><span style="color:#75715e">    mainWindow.loadURL(url.format({
+</span><span style="color:#75715e">      pathname: path.join(__dirname, &#39;index.html&#39;),
+</span><span style="color:#75715e">      protocol: &#39;file:&#39;,
+</span><span style="color:#75715e">      slashes: true
+</span><span style="color:#75715e">    }))
+</span><span style="color:#75715e">  */</span>
+  <span style="color:#75715e">// 加载应用----适用于 react 项目
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">mainWindow</span>.<span style="color:#a6e22e">loadURL</span>(<span style="color:#e6db74">&#39;http://localhost:3000/&#39;</span>);
+
+  <span style="color:#75715e">// 打开开发者工具，默认不打开
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// mainWindow.webContents.openDevTools()
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">// 关闭window时触发下列事件.
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">mainWindow</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;closed&#39;</span>, <span style="color:#66d9ef">function</span> () {
+    <span style="color:#a6e22e">mainWindow</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>
+  })
+}
+
+<span style="color:#75715e">// 当 Electron 完成初始化并准备创建浏览器窗口时调用此方法
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;ready&#39;</span>, <span style="color:#a6e22e">createWindow</span>)
+
+<span style="color:#75715e">// 所有窗口关闭时退出应用.
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;window-all-closed&#39;</span>, <span style="color:#66d9ef">function</span> () {
+  <span style="color:#75715e">// macOS中除非用户按下 `Cmd + Q` 显式退出,否则应用与菜单栏始终处于活动状态.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">platform</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#39;darwin&#39;</span>) {
+    <span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">quit</span>()
+  }
+})
+
+<span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;activate&#39;</span>, <span style="color:#66d9ef">function</span> () {
+   <span style="color:#75715e">// macOS中点击Dock图标时没有已打开的其余应用窗口时,则通常在应用中重建一个窗口
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">mainWindow</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">null</span>) {
+    <span style="color:#a6e22e">createWindow</span>()
+  }
+})
+
+<span style="color:#75715e">// 你可以在这个脚本中续写或者使用require引入独立的js文件.   
+</span></code></pre></div>
+<h4 id="配置-package-json">配置 package.json</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">{
+  <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;knownsec-fed&#34;</span>,
+  <span style="color:#e6db74">&#34;version&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;0.1.0&#34;</span>,
+  <span style="color:#e6db74">&#34;private&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+  <span style="color:#e6db74">&#34;main&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;main.js&#34;</span>, <span style="color:#75715e">// 配置启动文件
+</span><span style="color:#75715e"></span>  <span style="color:#e6db74">&#34;homepage&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;.&#34;</span>, <span style="color:#75715e">// 
+</span><span style="color:#75715e"></span>  <span style="color:#e6db74">&#34;dependencies&#34;</span><span style="color:#f92672">:</span> {
+    <span style="color:#e6db74">&#34;electron&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;^1.7.10&#34;</span>,
+    <span style="color:#e6db74">&#34;react&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;^16.2.0&#34;</span>,
+    <span style="color:#e6db74">&#34;react-dom&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;^16.2.0&#34;</span>,
+    <span style="color:#e6db74">&#34;react-scripts&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;1.1.0&#34;</span>
+  },
+  <span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#f92672">:</span> {
+    <span style="color:#e6db74">&#34;start&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;react-scripts start&#34;</span>,
+    <span style="color:#e6db74">&#34;build&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;react-scripts build&#34;</span>,
+    <span style="color:#e6db74">&#34;test&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;react-scripts test --env=jsdom&#34;</span>,
+    <span style="color:#e6db74">&#34;eject&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;react-scripts eject&#34;</span>,
+    <span style="color:#e6db74">&#34;electron-start&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;electron .&#34;</span> <span style="color:#75715e">// 配置electron的start，区别于web端的start
+</span><span style="color:#75715e"></span>  }
+}   
+</code></pre></div>
+<h4 id="启动-electron">启动 Electron</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 启动react项目</span>
+npm start
+<span style="color:#75715e"># 启动electron</span>
+npm run electron-start</code></pre></div>
+<p>支持热调试，当你修改代码后，桌面应用也将会重新更新。</p>
+
+<p><img src="http://blog-img.xuzhibin.com/2018-11-29-142523.png" alt="" /></p>
+
+<h3 id="打包"><strong>打包</strong></h3>
+
+<h4 id="打包-react-项目">打包 react 项目</h4>
+
+<p>首先修改 <code>main.js</code>, 因为现在你要将 react 项目打包在 build 文件夹下面，所以加载应用处改成如下！当然也可在某个配置文件里面配置是否属于开发，此处用if判断一下从未进行选择执行哪段加载应用代码。但是这里为了简便，暂且使用直接修改的方式：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// 加载应用----react 打包
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">mainWindow</span>.<span style="color:#a6e22e">loadURL</span>(<span style="color:#a6e22e">url</span>.<span style="color:#a6e22e">format</span>({
+  <span style="color:#a6e22e">pathname</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">join</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#39;./build/index.html&#39;</span>),
+  <span style="color:#a6e22e">protocol</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;file:&#39;</span>,
+  <span style="color:#a6e22e">slashes</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>
+}))
+<span style="color:#75715e">// 加载应用----适用于 react 开发时项目
+</span><span style="color:#75715e">// mainWindow.loadURL(&#39;http://localhost:3000/&#39;);
+</span></code></pre></div>
+<p>默认情况下，homepage 是 <a href="http://localhost:3000，build">http://localhost:3000，build</a> 后，所有资源文件路径都是 /static，而 Electron 调用的入口是 file :协议，/static 就会定位到根目录去，所以找不到静态文件。在 <code>package.json</code>文件中添加 homepage 字段并设置为&rdquo;.&ldquo;后，静态文件的路径就变成了相对路径，就能正确地找到了添加如下配置：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;homepage&#34;</span><span style="color:#f92672">:</span><span style="color:#e6db74">&#34;.&#34;</span>
+</code></pre></div>
+<p>然后就开始打包 react：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm run-script build</code></pre></div>
+<p>此时，根目录下面将多出一个build文件夹。</p>
+
+<h3 id="打包-electron">打包 electron</h3>
+
+<p><strong>常用打包插件</strong></p>
+
+<ul>
+<li><strong><a href="https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Felectron-userland%2Felectron-builder">electron-builder</a></strong></li>
+<li><strong><a href="https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Felectron-userland%2Felectron-packager">electron-packager</a></strong></li>
+</ul>
+
+<p><strong>安装electron-packager</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># knownsec-fed目录下安装electron-packager包</span>
+npm install electron-packager --save-dev
+<span style="color:#75715e"># 安装electron-packager命令</span>
+npm install electron-packager -g</code></pre></div>
+<p><strong>electron-packager命令介绍</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">  electron-packager &lt;location of project&gt; &lt;name of project&gt; &lt;platform&gt; &lt;architecture&gt; &lt;electron version&gt; &lt;optional options&gt;</pre></div>
+<ul>
+<li>location of project: 项目的本地地址，此处我这边是 ~/knownsec-fed</li>
+<li>location of project: 项目名称，此处是 knownsec-fed</li>
+<li>platform: 打包成的平台</li>
+<li>architecture: 使用 x86 还是 x64 还是两个架构都用</li>
+<li>electron version: electron 的版本</li>
+</ul>
+
+<p>于是，根据我这边的情况在 <code>package.json</code>文件的在 scripts 中加上如下代码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;package&#34;</span><span style="color:#f92672">:</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">electron</span><span style="color:#f92672">-</span><span style="color:#a6e22e">packager</span> <span style="color:#f92672">~</span><span style="color:#960050;background-color:#1e0010">/knownsec-fed/build knownsec-fed --all --out ~/ --electron-version 3.0.10```</span>
+
+<span style="color:#f92672">**</span><span style="color:#a6e22e">开始打包</span><span style="color:#f92672">**</span>
+
+<span style="color:#e6db74">```bash
+</span><span style="color:#e6db74">npm run-script package
+</span></code></pre></div>
+<p><strong>提醒</strong></p>
+
+<p>由于打包的时候会把浏览器内核完整打包进去，所以就算你的项目开发就几百k的资源，但最终的打包文件估计也会比较大。</p>
+
+<h2 id="其它">其它</h2>
+
+<p>此文章未涉及 Electron 具体的技术，只是简单的介绍了一下 react + electron 的一个配置及打包的流程。或许以后会写关于 Electron 的技术细节。Electron 有着非常强大的 api，其背后涉及的技术也非常多。</p>
+
+<p><strong>友情链接</strong></p>
+
+<ul>
+<li><p><a href="https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Felectron%2Felectron">Electron github</a></p></li>
+
+<li><p><a href="https://link.juejin.im/?target=https%3A%2F%2Felectronjs.org%2Fdocs">Electron 英文文档</a></p></li>
+
+<li><p><a href="https://link.juejin.im/?target=https%3A%2F%2Fwww.gitbook.com%2Fbook%2Fyuzhigang%2Felectron%2Fdetails">Electron 中文手册</a></p></li>
+
+<li><p><a href="https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Felectron-userland%2Felectron-packager">electron-packager github</a></p></li>
+
+<li><p><a href="https://link.juejin.im/?target=https%3A%2F%2Felectronjs.org%2Fapps">基于Electron构建的app</a></p></li>
+
+<li><p><a href="https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fchentsulin%2Felectron-react-boilerplate">electron-react-boilerplate github</a></p></li>
+</ul>
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="http://xuzhibin.com/tags/electron" rel="tag" title="electron">#electron#</a>
+    
+    <a href="http://xuzhibin.com/tags/react" rel="tag" title="react">#react#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://xuzhibin.com/post/2019/hugo-install/" rel="next" title="博客转为hugo">
+        <i class="fa fa-chevron-left"></i> 博客转为hugo
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://xuzhibin.com/post/2018/guangdongren/" rel="prev" title="广东人真是太太太太太好玩了">
+        广东人真是太太太太太好玩了 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+  <ul class="sidebar-nav motion-element">
+    <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+      文章目录
+    </li>
+    <li class="sidebar-nav-overview" data-target="site-overview">
+      站点概览
+    </li>
+  </ul>
+
+    <section class="site-overview sidebar-panel ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://xuzhibin.com/images/avatar.png"
+        alt="jabin" />
+    <p class="site-author-name" itemprop="name">jabin</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://xuzhibin.com/post/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://xuzhibin.com/categories/">      
+         
+        <span class="site-state-item-count">12</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://xuzhibin.com/tags/">
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="" target="_blank" title="">
+            <i class="fa fa-fw fa-"></i>
+            
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="" target="_blank" title="">
+            <i class="fa fa-fw fa-"></i>
+            
+        </a>
+        </span>
+    
+</div>
+
+      
+    </section>
+    
+<section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+    <div class="post-toc">
+        <div class="post-toc-content"><nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#electron-简单介绍">Electron 简单介绍</a>
+<ul>
+<li><a href="#是什么">是什么?</a></li>
+<li><a href="#原理是"><strong>原理是?</strong></a></li>
+<li><a href="#优缺点"><strong>优缺点？</strong></a></li>
+<li><a href="#怎么开始"><strong>怎么开始?</strong></a></li>
+</ul></li>
+<li><a href="#react-结合-electron">React 结合 Electron</a>
+<ul>
+<li><a href="#创建一个react项目"><strong>创建一个React项目</strong></a></li>
+<li><a href="#添加-electron-包">添加 Electron 包</a></li>
+<li><a href="#相关配置">相关配置</a>
+<ul>
+<li><a href="#配置-main-js"><strong>配置 main.js</strong></a></li>
+<li><a href="#配置-package-json">配置 package.json</a></li>
+<li><a href="#启动-electron">启动 Electron</a></li>
+</ul></li>
+<li><a href="#打包"><strong>打包</strong></a>
+<ul>
+<li><a href="#打包-react-项目">打包 react 项目</a></li>
+</ul></li>
+<li><a href="#打包-electron">打包 electron</a></li>
+</ul></li>
+<li><a href="#其它">其它</a></li>
+</ul></li>
+</ul>
+</nav></div>
+    </div>
+</section>
+
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2008 - 2019</span>
+  <span class="with-love"><i class="fa fa-user"></i></span>
+  <span class="author" itemprop="copyrightHolder">狂人居</span>
+</div>
+
+
+
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.1</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+<div class="theme-info">
+| <a href="http://www.miitbeian.gov.cn/">粤ICP备17022455号-1</a> | <a href="http://www.miitbeian.gov.cn/">粤ICP备17022455号-2</a> 
+</div>
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://xuzhibin.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://xuzhibin.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/utils.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/motion.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/affix.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/search.js"></script>
+
+<script src="http://xuzhibin.com/js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>正文提取 on 狂人居</title>
+    <link>http://xuzhibin.com/tags/%E6%AD%A3%E6%96%87%E6%8F%90%E5%8F%96/</link>
+    <description>Recent content in 正文提取 on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 11 Nov 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/%E6%AD%A3%E6%96%87%E6%8F%90%E5%8F%96/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>网页正文提取算法研究[非正则]</title>
+      <link>http://xuzhibin.com/post/2010/text-extraction/</link>
+      <pubDate>Thu, 11 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2010/text-extraction/</guid>
+      <description>互联网的页面展现形式相当丰富，但是如果按页面结构特征来分类，却不外乎以下几种类型：首页（包括栏目首页），列表页，内容页，评论页。 (1) **首页:</description>
+    </item>
+    
+  </channel>
+</rss>

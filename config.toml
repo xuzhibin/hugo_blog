@@ -1,0 +1,81 @@
+Title =  "狂人居"
+LanguageCode = "zh-CN"
+BaseUrl = "http://xuzhibin.com/"
+Theme =  "mynext"
+MetaDataFormat =  "yaml"
+CanonifyUrls =  true
+BuildDrafts =  false
+PaginatePath =  "p"
+Paginate = 8
+DisablePathToLower =  false
+HasCJKLanguage = true
+PreserveTaxonomyNames = false
+UglyUrls = false
+PygmentsStyle = "monokai"
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+DefaultContentLanguage = "zh"
+RSSLink =false
+
+[Params]
+  Introduce = "Programmer & Architect"
+  Description = "博客 | 软件 | 架构 | PHP | Python"
+  Keywords =  "博客,程序员,架构师,个人,思考,读书,笔记,技术,分享,PHP"
+  Subtitle = "路漫漫其修远兮,吾将上下而求索"
+  Imglogo = "/img/logo.png"
+  AuthorImg = "/images/avatar.png"
+  DateFormat = "2006-01-02"
+  YearFormat = "2006年"
+  MonthFormat = "01-02"
+  #BaiduStatsId = "909ed7bbbc09ee1c97aa6d6a91585e7f"
+  #QQStatsId = "58416275"
+  Fancybox = true
+  RSSLink =false
+
+[Author]
+  Name = "jabin"
+
+[Params.Share]
+  #DuoShuo = "lanlingzi"
+  Baidu = true
+
+[[Menu.Main]]
+  Name = "首页"
+  Pre = "home"
+  URL = "/"
+  Weight = 1
+[[Menu.Main]]
+  Name = "分类"
+  Pre = "th"
+  URL = "/categories/"
+  Weight = 2
+[[Menu.Main]]
+  Name = "归档"
+  Pre = "archive"
+  URL = "/post/"
+  Weight = 3
+ [[Menu.Main]]
+  Name = "标签"
+  Pre = "tags"
+  URL = "/tags/"
+  Weight = 4
+ [[Menu.Main]]
+  Name = "开发"
+  Pre = "star"
+  URL = "/development/"
+  Weight = 5
+[[Menu.Main]]
+  Name = "Resume"
+  Pre = "thumbs-up"
+  URL = "/resume/"
+  Weight = 6
+
+[[Params.Socials]]
+#  Name = "GitHub"
+#  Icon = "github"
+#  URL = "https://github.com/xtfly/"
+
+[[Params.Socials]]
+#  Name = "知乎"
+#  Icon = "globe"
+#  URL = "https://www.zhihu.com/people/lan-ling-xin-yun"  

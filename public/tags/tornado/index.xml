@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tornado on 狂人居</title>
+    <link>http://xuzhibin.com/tags/tornado/</link>
+    <description>Recent content in tornado on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 12 May 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/tornado/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>安装Tornado</title>
+      <link>http://xuzhibin.com/post/2012/install-tornado/</link>
+      <pubDate>Sat, 12 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2012/install-tornado/</guid>
+      <description>安装Tornado wget https://github.com/downloads/facebook/tornado/tornado-2.2.1.tar.gz tar xvzf tornado-2.2.1.tar.gz cd tornado-2.2.1 python setup.py build python setup.py install 到此，tornado已安装完成。 开启服务，运行hello world程序 cd tornado-2.2.1 ./demos/helloworld/helloworld.py 此时打开浏览器，地址</description>
+    </item>
+    
+  </channel>
+</rss>

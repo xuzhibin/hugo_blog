@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on 狂人居</title>
+    <link>http://xuzhibin.com/categories/</link>
+    <description>Recent content in Categories on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 16 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>tools</title>
+      <link>http://xuzhibin.com/categories/tools/</link>
+      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/categories/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>前端</title>
+      <link>http://xuzhibin.com/categories/%E5%89%8D%E7%AB%AF/</link>
+      <pubDate>Thu, 29 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/categories/%E5%89%8D%E7%AB%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>live</title>
+      <link>http://xuzhibin.com/categories/live/</link>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/categories/live/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>server</title>
+      <link>http://xuzhibin.com/categories/server/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/categories/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>http://xuzhibin.com/categories/python/</link>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/categories/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>技术</title>
+      <link>http://xuzhibin.com/categories/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Mon, 30 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/categories/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android</title>
+      <link>http://xuzhibin.com/categories/android/</link>
+      <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/categories/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>http://xuzhibin.com/categories/go/</link>
+      <pubDate>Wed, 12 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/categories/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ui</title>
+      <link>http://xuzhibin.com/categories/ui/</link>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/categories/ui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>http://xuzhibin.com/categories/linux/</link>
+      <pubDate>Wed, 18 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>research</title>
+      <link>http://xuzhibin.com/categories/research/</link>
+      <pubDate>Thu, 11 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/categories/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>.net</title>
+      <link>http://xuzhibin.com/categories/.net/</link>
+      <pubDate>Sun, 13 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/categories/.net/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

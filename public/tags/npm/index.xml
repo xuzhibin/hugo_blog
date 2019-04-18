@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>npm on 狂人居</title>
+    <link>http://xuzhibin.com/tags/npm/</link>
+    <description>Recent content in npm on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 29 May 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/npm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>npm小结</title>
+      <link>http://xuzhibin.com/post/2016/npm-summary/</link>
+      <pubDate>Sun, 29 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2016/npm-summary/</guid>
+      <description>随着一系列基于nodes的应用/工具的出现，无论在node应用的开发，还是使用中，包管理都扮演着一个很重要的作用。NPM（node package mana</description>
+    </item>
+    
+  </channel>
+</rss>

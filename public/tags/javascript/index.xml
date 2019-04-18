@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on 狂人居</title>
+    <link>http://xuzhibin.com/tags/javascript/</link>
+    <description>Recent content in javascript on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 08 Nov 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>悟透JavaScript笔记</title>
+      <link>http://xuzhibin.com/post/2011/understand-javascript/</link>
+      <pubDate>Tue, 08 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2011/understand-javascript/</guid>
+      <description>原生闭包 function Person(firstName, lastName, age) { //私有变量： var _firstName = firstName; var _lastName = lastName; //公共变量: this.age = age; //方法： this.getName = function() { return(firstName + &amp;#34; &amp;#34; + lastName); }; this.SayHello = function() { alert(&amp;#34;Hello, I&amp;#39;m &amp;#34; + firstName + &amp;#34; &amp;#34; + lastName); }; }; var BillGates = new</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools on 狂人居</title>
+    <link>http://xuzhibin.com/categories/tools/</link>
+    <description>Recent content in tools on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 16 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>博客转为hugo</title>
+      <link>http://xuzhibin.com/post/2019/hugo-install/</link>
+      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2019/hugo-install/</guid>
+      <description>&lt;p&gt;hexo生成速度越来越慢了，决定转为hugo，hugo安装使用简单，不过模板数量和质量的确和hexo有差距。&lt;/p&gt;
+
+&lt;p&gt;hugo生成速度非常快，以前hexo生成站点要10几秒，hugo在1秒以内。&lt;/p&gt;
+
+&lt;h1 id=&#34;安装&#34;&gt;安装&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.gohugo.org&#34;&gt;Hugo中文文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/xtfly/hugo-theme-next&#34;&gt;Next模板&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://blog.olowolo.com/post/hugo-quick-start/#url管理&#34;&gt;Hugo 从入门到会用&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>家庭数据中心</title>
+      <link>http://xuzhibin.com/post/2018/nas-home/</link>
+      <pubDate>Sun, 22 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2018/nas-home/</guid>
+      <description>&lt;p&gt;私人数据越来越多（如照片），网盘越来越小，并且不是关闭就是被墙。决定搭建自己的家庭数据中心。
+&lt;img src=&#34;http://blog-img.xuzhibin.com/2018-11-28-080111.jpg&#34; alt=&#34;WechatIMG156&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;计划-预算&#34;&gt;计划&amp;amp;预算&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;硬件：群晖218+（加一条8g内存），希捷酷狼4T*2，玩客云，希捷移动硬盘2T（玩客云用），4T（群晖用）各一个，小米盒子国际版，斐讯k2p路由器（刷官改rom）&lt;/li&gt;
+&lt;li&gt;预算：8k&lt;/li&gt;
+&lt;li&gt;目的：数据备份，家庭影视
+其实黑群也可以，价格更便宜。最好4盘位，2盘位还是少了点。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>在Coding部署Hexo</title>
+      <link>http://xuzhibin.com/post/2016/hexo-coding/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2016/hexo-coding/</guid>
+      <description>网上的Hexo教程大多是部署在Github，在实际的使用中，Github速度比较满，有时更新还会抽风一下，于是想在国内找个替代方案。 目前来说</description>
+    </item>
+    
+    <item>
+      <title>Hexo安装记</title>
+      <link>http://xuzhibin.com/post/2016/hexo-install/</link>
+      <pubDate>Mon, 30 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2016/hexo-install/</guid>
+      <description>Hexo是啥 Hexo 是由 Node.js 驱动的一款快速、简单且功能强大的博客框架。可以快速将 Markdown 格式的文档生成静态页面。是越来越笨重的 Wordpress 和麻烦的空间管理的替代方案</description>
+    </item>
+    
+    <item>
+      <title>npm小结</title>
+      <link>http://xuzhibin.com/post/2016/npm-summary/</link>
+      <pubDate>Sun, 29 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2016/npm-summary/</guid>
+      <description>随着一系列基于nodes的应用/工具的出现，无论在node应用的开发，还是使用中，包管理都扮演着一个很重要的作用。NPM（node package mana</description>
+    </item>
+    
+    <item>
+      <title>Git 常用命令速查表</title>
+      <link>http://xuzhibin.com/post/2013/git-command/</link>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2013/git-command/</guid>
+      <description>配置 $ git config --global user.name &amp;#34;John Doe&amp;#34; $ git config --global user.email johndoe@example.com 创建版本库 $ git clone [url] #克隆远程版本库 $ git clone git://github.com/schacon/grit.git $ git clone git://github.com/schacon/grit.git mygrit $ git clone --bare my_project my_project.git #创建纯仓库 $ git init #初始化本地版本库 $ git init --bare #</description>
+    </item>
+    
+  </channel>
+</rss>

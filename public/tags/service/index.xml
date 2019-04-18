@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>service on 狂人居</title>
+    <link>http://xuzhibin.com/tags/service/</link>
+    <description>Recent content in service on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 28 Feb 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/service/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>.Net下开发Windows Service</title>
+      <link>http://xuzhibin.com/post/2010/net-winservice/</link>
+      <pubDate>Sun, 28 Feb 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2010/net-winservice/</guid>
+      <description>Windows服务能做些什么？ Windows服务是这些后台程序、后台服务的正规名词。Windows服务的运行可以在没有用户干预的情况下，在后</description>
+    </item>
+    
+  </channel>
+</rss>

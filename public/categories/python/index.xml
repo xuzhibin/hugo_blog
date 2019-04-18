@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on 狂人居</title>
+    <link>http://xuzhibin.com/categories/python/</link>
+    <description>Recent content in python on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 08 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/categories/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mac下安装pyside2</title>
+      <link>http://xuzhibin.com/post/2018/mac-pyside-1st/</link>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2018/mac-pyside-1st/</guid>
+      <description>&lt;p&gt;环境：mac已经安装了python3.5，pip3.5
+IDE:PyCharm&lt;/p&gt;
+
+&lt;h1 id=&#34;安装pyside2&#34;&gt;安装pyside2&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;pip3.5 install --index-url&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;http://download.qt.io/snapshots/ci/pyside/5.9/latest/ pyside2 --trusted-host download.qt.io&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id=&#34;简单实例&#34;&gt;简单实例&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/usr/bin/python&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;# -*- coding: utf-8 -*-&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# 1st.py&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; sys
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; PySide2 &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; QtGui
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; PySide2 &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; QtWidgets
+
+app &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; QtWidgets&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;QApplication(sys&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;argv)
+
+wid &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; QtWidgets&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;QWidget()
+wid&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;resize(&lt;span style=&#34;color:#ae81ff&#34;&gt;250&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;150&lt;/span&gt;)
+wid&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;setWindowTitle(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Simple&amp;#39;&lt;/span&gt;)
+wid&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+
+sys&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;exit(app&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;exec_())&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;http://blog-img.xuzhibin.com/2018-11-28-081016.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on 狂人居</title>
+    <link>http://xuzhibin.com/categories/linux/</link>
+    <description>Recent content in linux on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 18 May 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>iptables封ip段的一些常见命令</title>
+      <link>http://xuzhibin.com/post/2011/iptables-blockip/</link>
+      <pubDate>Wed, 18 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2011/iptables-blockip/</guid>
+      <description>linux下使用iptables封ip段的一些常见命令： 封单个IP的命令 iptables -I INPUT -s 211.1.0.0 -j DROP 封IP段的命令 iptables -I INPUT -s 211.1.0.0/16 -j DROP iptables -I INPUT -s 211.2.0.0/16 -j DROP iptables -I INPUT -s 211.3.0.0/16 -j</description>
+    </item>
+    
+  </channel>
+</rss>

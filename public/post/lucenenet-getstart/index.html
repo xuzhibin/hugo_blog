@@ -1,0 +1,737 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>Lucene.Net入门基础 - 狂人居</title>
+    <meta name="keywords" content="博客,程序员,架构师,个人,思考,读书,笔记,技术,分享,PHP">
+    
+    <meta property="og:title" content="Lucene.Net入门基础">
+    <meta property="og:site_name" content="狂人居">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="Lucene.Net入门基础 - 狂人居" />
+    <meta name="description" content="博客 | 软件 | 架构 | PHP | Python"> 
+    
+    <link rel="shortcut icon" href="http://xuzhibin.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://xuzhibin.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://xuzhibin.com/img/apple-touch-icon.png" />
+    <link href="http://xuzhibin.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/css/syntax.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="http://xuzhibin.com/js/highlight/styles/a11y-dark.css">
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://xuzhibin.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">狂人居</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">路漫漫其修远兮,吾将上下而求索</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/categories/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/tags/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/development/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-star"></i> <br />开发
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/resume/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-thumbs-up"></i> <br />Resume
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://xuzhibin.com/post/lucenenet-getstart/" itemprop="url">
+        Lucene.Net入门基础
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2010-06-13">
+    2010-06-13
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://xuzhibin.com/categories/.net" itemprop="url" rel="index">
+        <span itemprop="name">.net</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">3743 字 ~8分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    
+
+<h1 id="简单的例子">简单的例子</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#75715e">//索引
+</span><span style="color:#75715e"></span>Private <span style="color:#66d9ef">void</span> Index()
+{
+    IndexWriter writer = <span style="color:#66d9ef">new</span> IndexWriter(<span style="color:#e6db74">@&#34;E:\Index&#34;</span>, <span style="color:#66d9ef">new</span> StandardAnalyzer());
+    Document doc = <span style="color:#66d9ef">new</span> Document();
+    doc.Add(<span style="color:#66d9ef">new</span> Field(<span style="color:#e6db74">&#34;Text&#34;</span>,<span style="color:#e6db74">&#34;哦耶,美丽的姑娘。&#34;</span>, Field.Store.YES, Field.Index.TOKENIZED));
+    writer.AddDocument(doc);
+    writer.Close();
+}
+
+<span style="color:#75715e">//搜索
+</span><span style="color:#75715e"></span>Private <span style="color:#66d9ef">void</span> Search(<span style="color:#66d9ef">string</span> words)
+{
+    IndexSearcher searcher = <span style="color:#66d9ef">new</span> IndexSearcher(<span style="color:#e6db74">@&#34;E:\Index&#34;</span>);
+    Query query = <span style="color:#66d9ef">new</span> QueryParser(<span style="color:#960050;background-color:#1e0010">“</span>Text<span style="color:#960050;background-color:#1e0010">”</span>, <span style="color:#66d9ef">new</span> StandardAnalyzer()).Parse(words);
+    Hits hits = searcher.Search(query);
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">0</span>; i &lt; hits.Length(); i++)
+        System.Console.WriteLine(hits.Doc(i).GetField(<span style="color:#e6db74">&#34;Text&#34;</span>).StringValue();
+    searcher.Close();
+}
+</code></pre></div>
+<h1 id="初识lucene">初识Lucene</h1>
+
+<h2 id="lucene是什么">Lucene是什么</h2>
+
+<p>Lucene是一个高性能的、可扩展的信息检索工具包。它只是Java类库，并不是现成的应用程序。它提供简单易用却十分强大的API接口，基于它你可以快速的构建功能强大的搜索程序（搜索引擎？）。当前最新版2.9.2.1。
+<img src="http://blog-img.xuzhibin.com/2018-11-28-081017.gif" alt="" /></p>
+
+<h2 id="什么是索引">什么是索引</h2>
+
+<p>为了实现快速的搜索，Lucene会首先将需要处理的数据以一种称为倒排索引（Inverted Index）的数据结构进行存储。怎样理解倒排索引呢？简单的说，倒排索引并不是回答“这个文档中包含哪些单词？”这个问题，而是经过优化以后用来快速回答“哪些文档包含词XX？”这个问题。就像需要给书籍整理一份供快速查找的目录一样，Lucene也得为需要被搜索的数据整理优化出一份索引文件(Index file)，而这个过程称之为“索引”(Indexing)。</p>
+
+<h2 id="lucene的核心类">Lucene的核心类</h2>
+
+<p>索引过程：</p>
+
+<p>IndexWriter Directory Analyzer Document Field</p>
+
+<p>搜索过程：</p>
+
+<p>IndexSearcher Term Query TermQuery Hits</p>
+
+<h1 id="索引">索引</h1>
+
+<h2 id="索引过程的流程图">索引过程的流程图</h2>
+
+<p><img src="http://blog-img.xuzhibin.com/2018-11-28-081018.gif" alt="" />
+注:Lucene索引过程分为三个主要的操作阶段：将数据换转成文本、分析文本、并将分析过的文本保存到索引库中</p>
+
+<h2 id="基本的索引操作">基本的索引操作</h2>
+
+<h3 id="添加索引">添加索引</h3>
+
+<p>Document</p>
+
+<p>Field（理解Field的参数）</p>
+
+<p>异构Document</p>
+
+<p>追加域</p>
+
+<p>增量索引</p>
+
+<h3 id="删除索引">删除索引</h3>
+
+<p>软删除，仅添加了删除标记。调用 IndexWriter.Optimize() 后真正删除。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">IndexReader reader = IndexReader.Open(directory);
+
+<span style="color:#75715e">// 删除指定序号(DocId)的 Document。
+</span><span style="color:#75715e"></span>reader.Delete(<span style="color:#ae81ff">123</span>);
+
+<span style="color:#75715e">// 删除包含指定 Term 的 Document。
+</span><span style="color:#75715e"></span>reader.Delete(<span style="color:#66d9ef">new</span> Term(FieldValue, <span style="color:#e6db74">&#34;Hello&#34;</span>));
+
+<span style="color:#75715e">// 恢复软删除。
+</span><span style="color:#75715e"></span>reader.UndeleteAll();
+
+reader.Close();
+</code></pre></div>
+<h3 id="更新索引">更新索引</h3>
+
+<p>事实上，Lucene没有更新索引的方法</p>
+
+<p>更新 = 删除 + 添加</p>
+
+<p>提示：当删除和添加多个Document对象时，最好进行批量处理。这样做的速度总是比交替的删除和添加操作的速度快得多。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#75715e">//只需将 create 参数设为 false，即可往现有索引库添加新数据。
+</span><span style="color:#75715e"></span>Directory directory = FSDirectory.GetDirectory(<span style="color:#e6db74">&#34;index&#34;</span>, <span style="color:#66d9ef">false</span>);
+IndexWriter writer = <span style="color:#66d9ef">new</span> IndexWriter(directory, analyzer, <span style="color:#66d9ef">false</span>);
+writer.AddDocument(doc1);
+writer.AddDocument(doc2);
+writer.Optimize();
+writer.Close();
+</code></pre></div>
+<h2 id="加权-boosing">加权(boosing)</h2>
+
+<p>可以给 Document 和 Field 增加权重(Boost)，使其在搜索结果排名更加靠前。缺省情况下，搜索结果以 Document.Score 作为排序依据，该数值越大排名越靠前。Boost 缺省值为 1。</p>
+
+<p><strong>Score = Score * Boost</strong></p>
+
+<p>通过上面的公式，我们就可以设置不同的权重来影响排名。
+如下面的例子中根据 VIP 级别设定不同的权重。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">Document document = <span style="color:#66d9ef">new</span> Document();
+<span style="color:#66d9ef">switch</span> (vip)
+{
+  <span style="color:#66d9ef">case</span> VIP.Gold: document.SetBoost(<span style="color:#ae81ff">2F</span>); <span style="color:#66d9ef">break</span>;
+  <span style="color:#66d9ef">case</span> VIP.Argentine: document.SetBoost(<span style="color:#ae81ff">1.5F</span>); <span style="color:#66d9ef">break</span>;
+}
+</code></pre></div>
+<p>只要 Boost 足够大，那么就可以让某个命中结果永远排第一位，这就是百度等网站的”收费排名”业务。</p>
+
+<h2 id="directory">Directory</h2>
+
+<p>从指定目录打开已有索引库。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">private</span> Directory directory = FSDirectory.GetDirectory(<span style="color:#e6db74">&#34;c:\index&#34;</span>, <span style="color:#66d9ef">false</span>);
+</code></pre></div>
+<p>将索引库载入内存，以提高搜索速度。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">private</span> Directory directory = <span style="color:#66d9ef">new</span> RAMDirectory(FSDirectory.GetDirectory(<span style="color:#e6db74">@&#34;c:\index&#34;</span>, <span style="color:#66d9ef">false</span>));
+<span style="color:#75715e">//或
+</span><span style="color:#75715e">//private Directory directory = new RAMDirectory(c:\index&#34;);
+</span></code></pre></div>
+<p>注意 FSDirectory.GetDirectory 的 create 参数，为 true 时将删除已有索引库文件，可以通过 IndexReader.IndexExists() 方法判断。</p>
+
+<h2 id="合并索引库">合并索引库</h2>
+
+<p>将 directory1 合并到 directory2 中。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">Directory directory1 = FSDirectory.GetDirectory(<span style="color:#e6db74">&#34;index1&#34;</span>, <span style="color:#66d9ef">false</span>);
+Directory directory2 = FSDirectory.GetDirectory(<span style="color:#e6db74">&#34;index2&#34;</span>, <span style="color:#66d9ef">false</span>);
+
+IndexWriter writer = <span style="color:#66d9ef">new</span> IndexWriter(directory2, analyzer, <span style="color:#66d9ef">false</span>);
+writer.AddIndexes(<span style="color:#66d9ef">new</span> Directory<span style="color:#a6e22e">[]</span> { directory });
+Console.WriteLine(writer.DocCount());
+writer.Close();
+</code></pre></div>
+<h2 id="优化索引">优化索引</h2>
+
+<ol>
+<li>很简单，一个writer.Optimize()搞定，优化过程会降低索引的效率，优化结果提高搜索性能。不要时时Optimize()，优化一次就够了</li>
+<li></li>
+<li>批量向 FSDirectory 增加索引时，增大合并因子(mergeFactor )和最小文档合并数(minMergeDocs)有助于提高性能，减少索引时间。</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">IndexWriter writer = <span style="color:#66d9ef">new</span> IndexWriter(directory, analyzer, <span style="color:#66d9ef">true</span>);
+
+writer.maxFieldLength = <span style="color:#ae81ff">1000</span>; <span style="color:#75715e">// 字段最大长度
+</span><span style="color:#75715e"></span>writer.mergeFactor = <span style="color:#ae81ff">1000</span>;
+writer.minMergeDocs = <span style="color:#ae81ff">1000</span>;
+
+<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">0</span>; i &lt; <span style="color:#ae81ff">10000</span>; i++)
+{
+  <span style="color:#75715e">// Add Documentes...
+</span><span style="color:#75715e"></span>}
+
+writer.Optimize();
+writer.Close();
+</code></pre></div>
+<p>利用 Lucene，在创建索引的工程中你可以充分利用机器的硬件资源来提高索引的效率。当你需要索引大量的文件时，你会注意到索引过程的瓶颈是在往磁盘上写索引文件的过程中。为了解决这个问题, Lucene 在内存中持有一块缓冲区。但我们如何控制 Lucene 的缓冲区呢？幸运的是，Lucene 的类 IndexWriter 提供了三个参数用来调整缓冲区的大小以及往磁盘上写索引文件的频率。</p>
+
+<p>（1）合并因子 (mergeFactor)</p>
+
+<p>这个参数决定了在 Lucene 的一个索引块中可以存放多少文档以及把磁盘上的索引块合并成一个大的索引块的频率。比如，如果合并因子的值是 10，那么当内存中的文档数达到 10 的时候所有的文档都必须写到磁盘上的一个新的索引块中。并且，如果磁盘上的索引块的隔数达到 10 的话，这 10 个索引块会被合并成一个新的索引块。这个参数的默认值是 10，如果需要索引的文档数非常多的话这个值将是非常不合适的。对批处理的索引来讲，为这个参数赋一个比较大的值会得到比较好的索引效果。</p>
+
+<p>（2）最小合并文档数 (minMergeDocs)</p>
+
+<p>这个参数也会影响索引的性能。它决定了内存中的文档数至少达到多少才能将它们写回磁盘。这个参数的默认值是10，如果你有足够的内存，那么将这个值尽量设的比较大一些将会显著的提高索引性能。</p>
+
+<p>（3）最大合并文档数 (maxMergeDocs)</p>
+
+<p>这个参数决定了一个索引块中的最大的文档数。它的默认值是 Integer.MAX_VALUE，将这个参数设置为比较大的值可以提高索引效率和检索速度，由于该参数的默认值是整型的最大值，所以我们一般不需要改动这个参数。</p>
+
+<h2 id="大数据量索引-并发性-多线程和锁机制">大数据量索引（并发性、多线程和锁机制）</h2>
+
+<h3 id="多线程索引">多线程索引</h3>
+
+<p>共享对象（注：一个IndexWriter或IndexReader对象可以被多个线程所共享）
+巧用RAMDirectory</p>
+
+<h3 id="安全锁">安全锁</h3>
+
+<p>Lucene使用基于文件的锁
+write.lock
+禁用索引锁 (disableLuceneLocks=true)</p>
+
+<h3 id="并发访问的规则">并发访问的规则</h3>
+
+<p>任意数量的只读操作都可以同时执行。
+在索引正在被修改时，我们也可以同时执行任意数量的只读操作。
+在某一时刻，只允许执行一个修改索引的操作。</p>
+
+<h1 id="搜索">搜索</h1>
+
+<h2 id="indexsearcher">IndexSearcher</h2>
+
+<p>通过IndexSearcher执行搜索</p>
+
+<p>两种构建IndexSearcher对象的方法： Directory对象与文件路径。 (前者是推荐的)
+Search()方法</p>
+
+<h2 id="query">Query</h2>
+
+<h3 id="创建query对象">创建Query对象</h3>
+
+<p>使用QueryParset构建Query对象。（注：QueryParset把查询表达式转换成Lucene内置的查询类型。）</p>
+
+<p>几个常用的内置类型：TermQuery、RangeQuery、PrefixQuery、BooleanQuery。</p>
+
+<h3 id="强悍的queryparser">强悍的QueryParser</h3>
+
+<p>Query类的toString()方法
+布尔查询 （AND、 OR、 NOT） 例：a AND b(+a +b) a OR b(a b) a AND NOT b(+a -b)</p>
+
+<p>组合查询 圆括号”()” 例： (a OR b) AND c</p>
+
+<p>域的选择 例：tag:美女</p>
+
+<p>范围查询 [ TO ] 和{ TO } 例：price:[100 TO 200] price:{100 TO 200}</p>
+
+<p>……</p>
+
+<p>(注：强悍，但不建议使用它)</p>
+
+<h2 id="hits">Hits</h2>
+
+<h3 id="使用hits对象访问搜索结果">使用Hits对象访问搜索结果</h3>
+
+<h3 id="hits类的几个方法">Hits类的几个方法</h3>
+
+<p>Length()    Hits对象集合中所包含的文档的数量</p>
+
+<p>Document(n) 排名第n的Document实例</p>
+
+<p>Id(n)   排名第n的DocumentID</p>
+
+<p>Score(n)    排名第n的标准分值</p>
+
+<h2 id="排序">排序</h2>
+
+<h3 id="使用sort对象排序">使用Sort对象排序</h3>
+
+<p>通过 SortField 的构造参数，我们可以设置排序字段，排序条件，以及倒排。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">Sort sort = <span style="color:#66d9ef">new</span> Sort(<span style="color:#66d9ef">new</span> SortField(FieldName, SortField.DOC, <span style="color:#66d9ef">false</span>));
+IndexSearcher searcher = <span style="color:#66d9ef">new</span> IndexSearcher(reader);
+Hits hits = searcher.Search(query, sort);
+</code></pre></div>
+<h3 id="按照索引顺序-索引时的文档id-排序">按照索引顺序(索引时的文档ID)排序</h3>
+
+<p>使用Sort.INDEXORDER作为参数</p>
+
+<h3 id="多域排序">多域排序</h3>
+
+<h3 id="排序对性能的影响">排序对性能的影响</h3>
+
+<p>排序对搜索速度影响还是很大的，尽可能不要使用多个排序条件。</p>
+
+<p>建议：采用默认的积分排序,设计良好的加权机制</p>
+
+<h2 id="过滤">过滤</h2>
+
+<p>过滤(Filtering)是Lucene中用于缩小搜索空间的一种机制。</p>
+
+<p>DateFliter 只限于指定日期域的值在某一时间范围</p>
+
+<p>QueryFilter 把查询作果作为另一个新查询可搜索的文档空间。</p>
+
+<p>建议：过滤器采取的是对搜索结果的再处理方式，会使程序的性能显著下降，一般推荐使用BooleanQuery组合更多的搜索条件来达成效果。</p>
+
+<p>例子：</p>
+
+<p>我们搜索上架时间在 2005-10-1 到 2005-10-30 之间的商品。</p>
+
+<p>对于日期时间，我们需要转换一下才能添加到索引库，同时还必须是索引字段。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#75715e">// index
+</span><span style="color:#75715e"></span>document.Add(FieldDate, DateField.DateToString(date), Field.Store.YES, Field.Index.UN_TOKENIZED);
+<span style="color:#75715e">//...
+</span><span style="color:#75715e">// search
+</span><span style="color:#75715e"></span>Filter filter = <span style="color:#66d9ef">new</span> DateFilter(FieldDate, DateTime.Parse(<span style="color:#e6db74">&#34;2005-10-1&#34;</span>), DateTime.Parse(<span style="color:#e6db74">&#34;2005-10-30&#34;</span>));
+Hits hits = searcher.Search(query, filter);
+</code></pre></div>
+<p>除了日期时间，还可以使用整数。比如搜索价格在 100 ~ 200 之间的商品。</p>
+
+<p>Lucene.Net NumberTools 对于数字进行了补位处理，如果需要使用浮点数可以自己参考源码进行。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#75715e">// index
+</span><span style="color:#75715e"></span>document.Add(<span style="color:#66d9ef">new</span> Field(FieldNumber, NumberTools.LongToString((<span style="color:#66d9ef">long</span>)price), Field.Store.YES, Field.Index.UN_TOKENIZED));
+<span style="color:#75715e">//...
+</span><span style="color:#75715e">// search
+</span><span style="color:#75715e"></span>Filter filter = <span style="color:#66d9ef">new</span> RangeFilter(FieldNumber, NumberTools.LongToString(<span style="color:#ae81ff">100L</span>), NumberTools.LongToString(<span style="color:#ae81ff">200L</span>), <span style="color:#66d9ef">true</span>, <span style="color:#66d9ef">true</span>);
+Hits hits = searcher.Search(query, filter);
+<span style="color:#960050;background-color:#1e0010">使用</span> Query <span style="color:#960050;background-color:#1e0010">作为过滤条件。</span>
+
+QueryFilter filter = <span style="color:#66d9ef">new</span> QueryFilter(QueryParser.Parse(<span style="color:#e6db74">&#34;name2&#34;</span>, FieldValue, analyzer));
+</code></pre></div>
+<p>我们还可以使用 FilteredQuery 进行多条件过滤。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">Filter filter = <span style="color:#66d9ef">new</span> DateFilter(FieldDate, DateTime.Parse(<span style="color:#e6db74">&#34;2005-10-10&#34;</span>), DateTime.Parse(<span style="color:#e6db74">&#34;2005-10-15&#34;</span>));
+Filter filter2 = <span style="color:#66d9ef">new</span> RangeFilter(FieldNumber, NumberTools.LongToString(<span style="color:#ae81ff">11L</span>), NumberTools.LongToString(<span style="color:#ae81ff">13L</span>), <span style="color:#66d9ef">true</span>, <span style="color:#66d9ef">true</span>);
+
+Query query = QueryParser.Parse(<span style="color:#e6db74">&#34;name*&#34;</span>, FieldName, analyzer);
+query = <span style="color:#66d9ef">new</span> FilteredQuery(query, filter);
+query = <span style="color:#66d9ef">new</span> FilteredQuery(query, filter2);
+
+IndexSearcher searcher = <span style="color:#66d9ef">new</span> IndexSearcher(reader);
+Hits hits = searcher.Search(query);
+</code></pre></div>
+<h2 id="多域搜索">多域搜索</h2>
+
+<p>使用MultiFieldQueryParser实现多域搜索</p>
+
+<p>权重影响域的优先级，而不是域的使用顺序</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">Query query = MultiFieldQueryParser.Parse(<span style="color:#e6db74">&#34;name*&#34;</span>, <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">string</span><span style="color:#a6e22e">[]</span> { FieldName, FieldValue }, analyzer);
+
+IndexReader reader = IndexReader.Open(directory);
+IndexSearcher searcher = <span style="color:#66d9ef">new</span> IndexSearcher(reader);
+Hits hits = searcher.Search(query);
+</code></pre></div>
+<h2 id="组合搜索">组合搜索</h2>
+
+<p>除了使用 QueryParser.Parse 分解复杂的搜索语法外，还可以通过组合多个 Query 来达到目的。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">Query query1 = <span style="color:#66d9ef">new</span> TermQuery(<span style="color:#66d9ef">new</span> Term(FieldValue, <span style="color:#e6db74">&#34;name1&#34;</span>)); <span style="color:#75715e">//词语搜索
+</span><span style="color:#75715e"></span>Query query2 = <span style="color:#66d9ef">new</span> WildcardQuery(<span style="color:#66d9ef">new</span> Term(FieldName, <span style="color:#e6db74">&#34;name*&#34;</span>)); <span style="color:#75715e">//通配符 
+</span><span style="color:#75715e"></span>Query query3 = <span style="color:#66d9ef">new</span> PrefixQuery(<span style="color:#66d9ef">new</span> Term(FieldName, <span style="color:#e6db74">&#34;name1&#34;</span>)); <span style="color:#75715e">//字段搜索 Field:Keyword，自动在结尾添加 *
+</span><span style="color:#75715e"></span>Query query4 = <span style="color:#66d9ef">new</span> RangeQuery(<span style="color:#66d9ef">new</span> Term(FieldNumber, NumberTools.LongToString(<span style="color:#ae81ff">11L</span>)), <span style="color:#66d9ef">new</span> Term(FieldNumber, NumberTools.LongToString(<span style="color:#ae81ff">13L</span>)), <span style="color:#66d9ef">true</span>); <span style="color:#75715e">//范围搜索
+</span><span style="color:#75715e"></span>Query query5 = <span style="color:#66d9ef">new</span> FilteredQuery(query, filter); <span style="color:#75715e">//带过滤条件的搜索
+</span><span style="color:#75715e"></span>      
+BooleanQuery query = <span style="color:#66d9ef">new</span> BooleanQuery();
+query.Add(query1, BooleanClause.Occur.MUST);
+query.Add(query2, BooleanClause.Occur.MUST);
+
+IndexSearcher searcher = <span style="color:#66d9ef">new</span> IndexSearcher(reader);
+Hits hits = searcher.Search(query);
+</code></pre></div>
+<h2 id="分布搜索">分布搜索</h2>
+
+<p>我们可以使用 MultiReader 或 MultiSearcher 搜索多个索引库。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">MultiReader reader = <span style="color:#66d9ef">new</span> MultiReader(<span style="color:#66d9ef">new</span> IndexReader<span style="color:#a6e22e">[]</span> { IndexReader.Open(<span style="color:#e6db74">@&#34;c:\index&#34;</span>), IndexReader.Open(<span style="color:#e6db74">@&#34;\\server\index&#34;</span>) });
+IndexSearcher searcher = <span style="color:#66d9ef">new</span> IndexSearcher(reader);
+Hits hits = searcher.Search(query);
+</code></pre></div>
+<p>或</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">IndexSearcher searcher1 = <span style="color:#66d9ef">new</span> IndexSearcher(reader1);
+IndexSearcher searcher2 = <span style="color:#66d9ef">new</span> IndexSearcher(reader2);
+MultiSearcher searcher = <span style="color:#66d9ef">new</span> MultiSearcher(<span style="color:#66d9ef">new</span> Searchable<span style="color:#a6e22e">[]</span> { searcher1, searcher2 });
+Hits hits = searcher.Search(query);
+</code></pre></div>
+<p>还可以使用 ParallelMultiSearcher 进行多线程并行搜索。</p>
+
+<h2 id="显示搜索语法字符串">显示搜索语法字符串</h2>
+
+<p>我们组合了很多种搜索条件，或许想看看与其对等的搜索语法串是什么样的。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">BooleanQuery query = <span style="color:#66d9ef">new</span> BooleanQuery();
+query.Add(query1, <span style="color:#66d9ef">true</span>, <span style="color:#66d9ef">false</span>);
+query.Add(query2, <span style="color:#66d9ef">true</span>, <span style="color:#66d9ef">false</span>);
+<span style="color:#75715e">//...
+</span><span style="color:#75715e"></span>Console.WriteLine(<span style="color:#e6db74">&#34;Syntax: {0}&#34;</span>, query.ToString());
+<span style="color:#960050;background-color:#1e0010">输出：</span>
+Syntax: +(name:name* <span style="color:#66d9ef">value</span>:name*) +number:<span style="color:#a6e22e">[0000000000000000b TO 0000000000000000d]</span>
+</code></pre></div>
+<h1 id="分词">分词</h1>
+
+<h2 id="何谓分析器">何谓分析器</h2>
+
+<p>分析(Analysis)，在Lucene当中指的是将域(Field)文本转换为最基本的索引单元——项(Term)的过程。</p>
+
+<h2 id="内置的分析器">内置的分析器</h2>
+
+<p>KeywordAnalyzer
+SimpleAnalyzer
+StopAnalyzer
+WhitespaceAnalyzer
+StandardAnalyzer (最强大的了)</p>
+
+<h2 id="中文分词">中文分词</h2>
+
+<p>官方没有自带的中文分词，可以选择第三方的开源中文分词，如盘古分词</p>
+
+<p><a href="http://xuzhibin.com/uploads/lucenenet-getstart/LuceneDemo.rar">例子源码下载 SourceCode</a></p>
+
+<p><img src="http://blog-img.xuzhibin.com/2018-11-28-081019.gif" alt="" /></p>
+
+<p>PS：例子程序采用的的Lucene.Net版本为2.9.2.1，文中所举例子程序未必能兼容最新版本，用法请以例子程序为准。
+例子程序采用的中文分词为盘古分词。其官网为<a href="http://pangusegment.codeplex.com/">http://pangusegment.codeplex.com/</a></p>
+
+<h1 id="参考资料">参考资料:</h1>
+
+<p>王振春同学的Lucene.Net培训资料
+[Lucene.Net] 基本用法 <a href="http://www.rainsts.net/article.asp?id=313">http://www.rainsts.net/article.asp?id=313</a></p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="http://xuzhibin.com/tags/lucene" rel="tag" title="lucene">#lucene#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://xuzhibin.com/post/text-extraction/" rel="next" title="网页正文提取算法研究[非正则]">
+        <i class="fa fa-chevron-left"></i> 网页正文提取算法研究[非正则]
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://xuzhibin.com/post/install-crontab/" rel="prev" title="CentOS安装crontab及使用方法">
+        CentOS安装crontab及使用方法 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://xuzhibin.com/images/avatar.png"
+        alt="jabin" />
+    <p class="site-author-name" itemprop="name">jabin</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://xuzhibin.com/post/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://xuzhibin.com/categories/">      
+         
+        <span class="site-state-item-count">12</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://xuzhibin.com/tags/">
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="" target="_blank" title="">
+            <i class="fa fa-fw fa-"></i>
+            
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="" target="_blank" title="">
+            <i class="fa fa-fw fa-"></i>
+            
+        </a>
+        </span>
+    
+</div>
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2008 - 2019</span>
+  <span class="with-love"><i class="fa fa-user"></i></span>
+  <span class="author" itemprop="copyrightHolder">狂人居</span>
+</div>
+
+
+
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.1</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+<div class="theme-info">
+| <a href="http://www.miitbeian.gov.cn/">粤ICP备17022455号-1</a> | <a href="http://www.miitbeian.gov.cn/">粤ICP备17022455号-2</a> 
+</div>
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://xuzhibin.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://xuzhibin.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/utils.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/motion.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/affix.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/search.js"></script>
+
+<script src="http://xuzhibin.com/js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

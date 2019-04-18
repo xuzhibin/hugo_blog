@@ -1,0 +1,695 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>Hexo安装记 - 狂人居</title>
+    <meta name="keywords" content="博客,程序员,架构师,个人,思考,读书,笔记,技术,分享,PHP">
+    
+    <meta property="og:title" content="Hexo安装记">
+    <meta property="og:site_name" content="狂人居">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="Hexo安装记 - 狂人居" />
+    <meta name="description" content="博客 | 软件 | 架构 | PHP | Python"> 
+    
+    <link rel="shortcut icon" href="http://xuzhibin.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://xuzhibin.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://xuzhibin.com/img/apple-touch-icon.png" />
+    <link href="http://xuzhibin.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/css/syntax.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="http://xuzhibin.com/js/highlight/styles/a11y-dark.css">
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://xuzhibin.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">狂人居</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">路漫漫其修远兮,吾将上下而求索</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/categories/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/tags/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/development/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-star"></i> <br />开发
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/resume/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-thumbs-up"></i> <br />Resume
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://xuzhibin.com/post/hexo-install/" itemprop="url">
+        Hexo安装记
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-05-30">
+    2016-05-30
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://xuzhibin.com/categories/tools" itemprop="url" rel="index">
+        <span itemprop="name">tools</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2808 字 ~6分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    
+
+<h1 id="hexo是啥">Hexo是啥</h1>
+
+<p><a href="https://hexo.io">Hexo</a> 是由 Node.js 驱动的一款快速、简单且功能强大的博客框架。可以快速将 Markdown 格式的文档生成静态页面。是越来越笨重的 Wordpress 和麻烦的空间管理的替代方案。</p>
+
+<h1 id="安装-hexo">安装 Hexo</h1>
+
+<p>首先翻看一遍 <a href="https://hexo.io/zh-cn/">Hexo 官方文档</a></p>
+
+<h2 id="环境准备">环境准备</h2>
+
+<p>安装 Node.js &amp; Git</p>
+
+<p>该命令执行后，自动装好node和npm。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">brew install node</code></pre></div>
+<h2 id="配置-git">配置 Git</h2>
+
+<p>按照Github提示，创建SSH秘钥：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir ~/.ssh <span style="color:#75715e">#创建ssh命令</span>
+$ cd ~/.ssh
+$ ssh-keygen -t rsa -C <span style="color:#e6db74">&#34;your_email@example.com&#34;</span> <span style="color:#75715e">#注意更改Email地址</span>
+$ pbcopy &lt; ~/.ssh/id_rsa.pub</code></pre></div>
+<p>此时，pdcopy命令已经将id_rsa.pub内容复制到剪切板。</p>
+
+<p>登录 github：<a href="https://github.com/settings/ssh">https://github.com/settings/ssh</a> 点击Add an SSH Key，Title 部分填写一个所用电脑的名称，然后在Key部分填写之前通过pdcopy命令复制的内容。生成 key <a href="https://help.github.com/articles/generating-ssh-keys/">https://help.github.com/articles/generating-ssh-keys/</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git config --global user.name <span style="color:#e6db74">&#34;yourusername&#34;</span>
+$ git config --global user.email <span style="color:#e6db74">&#34;youremail&#34;</span></code></pre></div>
+<h2 id="测试">测试</h2>
+
+<p>可以输入下面的命令，看看设置是否成功，git@github.com的部分不要修改：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ ssh -T git@github.com</code></pre></div>
+<p>如果是下面的反馈：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">The authenticity of host <span style="color:#e6db74">&#39;github.com (207.97.227.239)&#39;</span> can<span style="color:#960050;background-color:#1e0010">&#39;</span>t be established.
+RSA key fingerprint is <span style="color:#ae81ff">16</span>:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to <span style="color:#66d9ef">continue</span> connecting <span style="color:#f92672">(</span>yes/no<span style="color:#f92672">)</span>?</code></pre></div>
+<p>不要紧张，输入yes就好，然后会看到：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Hi cnfeat! You<span style="color:#960050;background-color:#1e0010">&#39;</span>ve successfully authenticated, but GitHub does not provide shell access.</code></pre></div>
+<h2 id="安装-hexo-1">安装 Hexo</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install -g hexo-cli</code></pre></div>
+<p>好了，这个时候如果报错，记得加 sudo</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo npm install -g hexo-cli</code></pre></div>
+<!-- more -->
+
+<h1 id="配置-hexo">配置 Hexo</h1>
+
+<p>进入想要存放博客的文件夹，初始化设置：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hexo init
+$ npm install</code></pre></div>
+<p>初始化成功后，文件夹里会有这些东西：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+├── _config.yml        <span style="color:#75715e">#配置文件</span>
+├── package.json    <span style="color:#75715e">#应用程序数据</span>
+├── scaffolds
+├── source            <span style="color:#75715e">#网站内容</span>
+|   ├── _drafts        <span style="color:#75715e">#草稿</span>
+|   └── _posts        <span style="color:#75715e">#文章</span>
+└── themes            <span style="color:#75715e">#主题</span></code></pre></div>
+<p>配置文件的详细说明请查看官方文档。</p>
+
+<h1 id="本地访问博客">本地访问博客</h1>
+
+<p>生成静态文件：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hexo generate</code></pre></div>
+<p>启动本地服务：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hexo server</code></pre></div>
+<p>这时提示</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">Hexo is running at http://0.0.0.0:4000/. Press Ctrl+C to stop.</code></pre></div>
+<p>然后在浏览器打开 <a href="http://0.0.0.0:4000/，就可以看到迁移好的博客啦！">http://0.0.0.0:4000/，就可以看到迁移好的博客啦！</a></p>
+
+<h1 id="挑选主题">挑选主题</h1>
+
+<p>可参考 有那些好看的 Hexo 主题？</p>
+
+<p>下载主题：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/xxxx themes/xxx</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd your-hexo-site
+$ git clone https://github.com/iissnan/hexo-theme-next themes/next</code></pre></div>
+<p>启用主题：克隆/下载 完成后，打开 站点配置文件 “_config.yml”，找到 theme 字段，并将其值更改为下载的主题名字。</p>
+
+<p>剩下的就根据主题使用文档，按照自己的喜好修改了。</p>
+
+<p>我选的 <a href="http://theme-next.iissnan.com">NEXT主题</a> 胜在 <a href="http://theme-next.iissnan.com/getting-started.html">说明文档</a> 超详细的~</p>
+
+<h1 id="安装插件">安装插件</h1>
+
+<p><strong>站内搜索</strong>
+hexo-generator-search插件为 Hexo3 提供搜索功能。</p>
+
+<p>安装：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install hexo-generator-search --save</code></pre></div>
+<p><strong>Feed</strong>
+hexo-generator-feed 可以生成Atom 1.0 或 RSS 2.0 feed。</p>
+
+<p>安装：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install hexo-generator-feed --save</code></pre></div>
+<p><strong>Sitemap</strong>
+说明</p>
+
+<p>安装：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install hexo-generator-seo-friendly-sitemap --save</code></pre></div>
+<h1 id="配置-github-并上传">配置 Github 并上传</h1>
+
+<p>新建跟用户名同名的 repository，以“.github.io” 为后缀</p>
+
+<p>创建成功后，点击界面右侧的Settings，打开页面后找到GitHub Pages，点击Launch automatic page generator，生成 page。</p>
+
+<p>然后在网站配置文件 _config.yml文件中，找到Deployment，修改配置：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">deploy:
+  type: git
+  repo: git@github.com:yourname/yourname.github.io.git
+  branch: master</code></pre></div>
+<p>如果使用 git 方式部署，执行</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install hexo-deployer-git --save</code></pre></div>
+<p>命令来安装插件。</p>
+
+<p>安装成功后，在当前目录进行 deploy 操作</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hexo d</code></pre></div>
+<p>上传成功后，访问 yourname.github.io ，测试是否可以正常访问。</p>
+
+<h1 id="绑定域名">绑定域名</h1>
+
+<p>在 Github 里生成 CNAME 文件
+为了绑定域名，首先在 Hexo 的 &ldquo;source&rdquo; 文件夹中新建一个CNAME文件（没有后缀），文件内容为你要设置的域名。目的是将你的域名（如 uegeek.com ）指向 Github 服务器。</p>
+
+<p>Deploy 到 Github上去后大概需要几分钟生效。</p>
+
+<p>到 DNSPod 新建域名，并添加 CNAME 记录指向 kidult00.github.io 。</p>
+
+<p>当打开 uegeek.com 看到改头换面的博客后，内心默默地原谅自己拖延了两年 T.T</p>
+
+<h1 id="hexo设置">Hexo设置</h1>
+
+<h2 id="站点设置">站点设置</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ini" data-lang="ini"><span style="color:#75715e"># Hexo Configuration</span>
+<span style="color:#75715e">## Docs: http://hexo.io/docs/configuration.html</span>
+<span style="color:#75715e">## Source: https://github.com/tommy351/hexo/</span>
+
+<span style="color:#75715e"># Site #整站的基本信息</span>
+<span style="color:#a6e22e">title: 1000 words a Day #网站标题</span>
+<span style="color:#a6e22e">subtitle: Writing 1000 Words a Day Changes My Life #网站副标题</span>
+<span style="color:#a6e22e">description: 学习总结 思考感悟 知识管理 #网站描述</span>
+<span style="color:#a6e22e">author:  cnFeat #网站作者，在下方显示</span>
+<span style="color:#a6e22e">email: cnFeat@gmail.com #联系邮箱</span>
+<span style="color:#a6e22e">language: zh-CN</span>
+
+<span style="color:#75715e"># URL</span>
+<span style="color:#75715e">## If your site is put in a subdirectory</span>
+<span style="color:#a6e22e">url: http://www.cnfeat.com #你的域名</span>
+<span style="color:#a6e22e">root: /</span>
+<span style="color:#a6e22e">permalink: :year/:month/:day/:title/</span>
+<span style="color:#a6e22e">tag_dir: tags</span>
+<span style="color:#a6e22e">archive_dir: archives</span>
+<span style="color:#a6e22e">category_dir: categories</span>
+<span style="color:#a6e22e">code_dir: downloads/code</span>
+
+<span style="color:#75715e"># Directory</span>
+<span style="color:#a6e22e">source_dir: source</span>
+<span style="color:#a6e22e">public_dir: public</span>
+
+<span style="color:#75715e"># Writing</span>
+<span style="color:#a6e22e">new_post_name: :title.md # File name of new posts</span>
+<span style="color:#a6e22e">default_layout: post</span>
+<span style="color:#a6e22e">auto_spacing: false # Add spaces between asian characters and western characters</span>
+<span style="color:#a6e22e">titlecase: false # Transform title into titlecase</span>
+<span style="color:#a6e22e">external_link: true # Open external links in new tab</span>
+<span style="color:#a6e22e">max_open_file: 100</span>
+<span style="color:#a6e22e">multi_thread: true</span>
+<span style="color:#a6e22e">filename_case: 0</span>
+<span style="color:#a6e22e">render_drafts: false</span>
+<span style="color:#a6e22e">post_asset_folder: false</span>
+<span style="color:#a6e22e">highlight:</span>
+  <span style="color:#a6e22e">enable: true</span>
+  <span style="color:#a6e22e">line_number: true</span>
+  <span style="color:#a6e22e">tab_replace:</span>
+
+<span style="color:#75715e"># Category &amp; Tag</span>
+<span style="color:#a6e22e">default_category: uncategorized</span>
+<span style="color:#a6e22e">category_map:</span>
+<span style="color:#a6e22e">tag_map:</span>
+
+<span style="color:#75715e"># Archives</span>
+<span style="color:#75715e">## 2: Enable pagination</span>
+<span style="color:#75715e">## 1: Disable pagination</span>
+<span style="color:#75715e">## 0: Fully Disable</span>
+<span style="color:#a6e22e">archive: 2</span>
+<span style="color:#a6e22e">category: 2</span>
+<span style="color:#a6e22e">tag: 2</span>
+
+<span style="color:#75715e"># Server</span>
+<span style="color:#75715e">## Hexo uses Connect as a server</span>
+<span style="color:#75715e">## You can customize the logger format as defined in</span>
+<span style="color:#75715e">## http://www.senchalabs.org/connect/logger.html</span>
+<span style="color:#a6e22e">port: 4000</span>
+<span style="color:#a6e22e">server_ip: 0.0.0.0</span>
+<span style="color:#a6e22e">logger: false</span>
+<span style="color:#a6e22e">logger_format:</span>
+
+<span style="color:#75715e"># Date / Time format</span>
+<span style="color:#75715e">## Hexo uses Moment.js to parse and display date</span>
+<span style="color:#75715e">## You can customize the date format as defined in</span>
+<span style="color:#75715e">## http://momentjs.com/docs/#/displaying/format/</span>
+<span style="color:#a6e22e">date_format: YYYY-MM-DD</span>
+<span style="color:#a6e22e">time_format: H:mm:ss</span>
+
+<span style="color:#75715e"># Pagination</span>
+<span style="color:#75715e">## Set per_page to 0 to disable pagination</span>
+<span style="color:#a6e22e">per_page: 15 #每页15篇文章</span>
+<span style="color:#a6e22e">pagination_dir: page</span>
+
+<span style="color:#75715e"># Disqus #社会化评论disqus，我使用多说，在主题中配置</span>
+<span style="color:#a6e22e">disqus_shortname:</span>
+
+<span style="color:#75715e"># Extensions</span>
+<span style="color:#75715e">## Plugins: https://github.com/tommy351/hexo/wiki/Plugins</span>
+<span style="color:#75715e">## Themes: https://github.com/tommy351/hexo/wiki/Themes</span>
+<span style="color:#a6e22e">theme: jacman</span>
+<span style="color:#a6e22e">exclude_generator:</span>
+<span style="color:#a6e22e">Plugins:</span>
+<span style="color:#a6e22e">- hexo-generator-feed</span>
+<span style="color:#a6e22e">- hexo-generator-sitemap</span>
+
+<span style="color:#75715e">#sitemap</span>
+<span style="color:#a6e22e">sitemap:</span>
+  <span style="color:#a6e22e">path: sitemap.xml</span>
+
+<span style="color:#75715e">#Feed Atom</span>
+<span style="color:#a6e22e">feed:</span>
+  <span style="color:#a6e22e">type: atom</span>
+  <span style="color:#a6e22e">path: atom.xml</span>
+  <span style="color:#a6e22e">limit: 20</span>
+
+<span style="color:#75715e"># Markdown</span>
+<span style="color:#75715e">## https://github.com/chjj/marked</span>
+<span style="color:#a6e22e">markdown:</span>
+  <span style="color:#a6e22e">gfm: true</span>
+  <span style="color:#a6e22e">pedantic: false</span>
+  <span style="color:#a6e22e">sanitize: false</span>
+  <span style="color:#a6e22e">tables: true</span>
+  <span style="color:#a6e22e">breaks: true</span>
+  <span style="color:#a6e22e">smartLists: true</span>
+  <span style="color:#a6e22e">smartypants: true</span>
+
+<span style="color:#75715e"># Stylus</span>
+<span style="color:#a6e22e">stylus:</span>
+  <span style="color:#a6e22e">compress: false</span>
+
+<span style="color:#75715e"># Deployment</span>
+<span style="color:#75715e">## Docs: http://hexo.io/docs/deployment.html</span>
+<span style="color:#a6e22e">deploy:</span>
+  <span style="color:#a6e22e">type: github</span>
+  <span style="color:#a6e22e">repository: https://github.com/xuzhibin/xuzhibin.github.io.git</span>
+  <span style="color:#a6e22e">branch: master</span></code></pre></div>
+<h2 id="模版设置">模版设置</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.
+├── languages  <span style="color:#75715e">#多语言</span>
+|   ├── default.yml#默认语言
+|   └── zh-CN.yml  <span style="color:#75715e">#中文语言</span>
+├── layout <span style="color:#75715e">#布局，根目录下的*.ejs文件是对主页，分页，存档等的控制</span>
+|   ├── _partial   <span style="color:#75715e">#局部的布局，此目录下的*.ejs是对头尾等局部的控制</span>
+|   └── _widget#小挂件的布局，页面下方小挂件的控制
+├── source <span style="color:#75715e">#源码</span>
+|   ├── css#css源码 
+|   |   ├── _base  <span style="color:#75715e">#*.styl基础css</span>
+|   |   ├── _partial   <span style="color:#75715e">#*.styl局部css</span>
+|   |   ├── fonts  <span style="color:#75715e">#字体</span>
+|   |   ├── images <span style="color:#75715e">#图片</span>
+|   |   └── style.styl <span style="color:#75715e">#*.styl引入需要的css源码</span>
+|   ├── fancybox   <span style="color:#75715e">#fancybox效果源码</span>
+|   └── js <span style="color:#75715e">#javascript源代码</span>
+├── _config.yml#主题配置文件
+└── README.md  <span style="color:#75715e">#用GitHub的都知道</span></code></pre></div>
+<h1 id="常用命令">常用命令</h1>
+
+<h2 id="发表新文章">发表新文章</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hexo n <span style="color:#75715e">#写文章</span></code></pre></div>
+<p>其中my new post为文章标题，执行命令后，会在项目\source_posts中生成my new post.md文件，用编辑器打开编写即可。</p>
+
+<p>当然，也可以直接在\source_posts中新建一个md文件，我就是这么做的。</p>
+
+<p>写完后，推送到服务器上，执行</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ hexo g <span style="color:#75715e">#生成</span>
+$ hexo d <span style="color:#75715e">#部署 # 可与hexo g合并为 hexo d -g</span></code></pre></div>
+<h2 id="用hexo发表文章的markdown语法">用Hexo发表文章的Markdown语法</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">title: postName <span style="color:#75715e">#文章页面上的显示名称，可以任意修改，不会出现在URL中</span>
+date: <span style="color:#ae81ff">2013</span>-12-02 <span style="color:#ae81ff">15</span>:30:16 <span style="color:#75715e">#文章生成时间，一般不改，当然也可以任意修改</span>
+categories: example <span style="color:#75715e">#分类</span>
+tags: <span style="color:#f92672">[</span>tag1,tag2,tag3<span style="color:#f92672">]</span> <span style="color:#75715e">#文章标签，可空，多标签请用格式，注意:后面有个空格</span>
+description: 附加一段文章摘要，字数最好在140字以内。
+---
+
+以下正文</code></pre></div>
+<h2 id="常用命令-1">常用命令</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hexo new <span style="color:#e6db74">&#34;postName&#34;</span> <span style="color:#75715e">#新建文章</span>
+hexo new page <span style="color:#e6db74">&#34;pageName&#34;</span> <span style="color:#75715e">#新建页面</span>
+hexo generate <span style="color:#75715e">#生成静态页面至public目录</span>
+hexo server <span style="color:#75715e">#开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span>
+hexo deploy <span style="color:#75715e">#将.deploy目录部署到GitHub</span></code></pre></div>
+<h2 id="常用复合命令">常用复合命令</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hexo d -g <span style="color:#75715e">#生成加部署</span>
+hexo s -g <span style="color:#75715e">#预览加部署</span></code></pre></div>
+<h2 id="简写">简写</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hexo n <span style="color:#f92672">==</span> hexo new
+hexo g <span style="color:#f92672">==</span> hexo generate
+hexo s <span style="color:#f92672">==</span> hexo server
+hexo d <span style="color:#f92672">==</span> hexo deploy</code></pre></div>
+<h1 id="hexo备份">Hexo备份</h1>
+
+<p>已有人写了插件，<a href="https://github.com/coneycode/hexo-git-backup">hexo-git-backup</a>，按步骤操作即可；</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install hexo-git-backup --save</code></pre></div>
+<p>修改站点配置文件 _config.yml.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">backup:
+    type: git
+    repository:
+       github: git@github.com:xxx/xxx.git,branchName
+       gitcafe: git@github.com:xxx/xxx.git,branchName</code></pre></div>
+<p>使用</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hexo backup</code></pre></div>
+<p>or</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">hexo b</code></pre></div>
+<h1 id="hexo部署在vps">Hexo部署在VPS</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ npm install hexo-deployer-rsync --save</code></pre></div>
+<p>根据 <a href="https://hexo.io/zh-cn/docs/deployment.html#Rsync">Hexo rsync 部署文档</a> 在 Hexo 中的 _config.yml 中添加 Deploy 的配置，以下是我在自己项目中的配置代码</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">deploy:
+  type: rsync
+  host: 你 VPS 的 IP 地址或者域名
+  user: root
+  root: 你想将 Hexo 生成的静态文件存放在 VPS 中的目录 例如: /www/hexo/blog/
+  port: 你 VPS 的 ssh 端口号
+  delete: true
+  verbose: true
+  ignore_errors: false</pre></div>
+<p>*必须先在 VPS 上创建好了想要存放 Hexo 静态文件的目录， rsync 不能创建不存在的目录</p>
+
+<p>我看网上有的朋友说光在 Hexo 中使用 rsync 不够，在 VPS 也需要下载 rsync 服务，但是我在阿里云上就没有下载 rsync 服务。如果你在 Hexo 中用 rsync 部署的时候一直报错，那就在 VPS 上下载 rsync 服务，看能否解决一直出错的原因，命令如下</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ yum -y install rsync</code></pre></div>
+<p>如果rsync 报下面的错误</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rsync error: some files could not be transferred <span style="color:#f92672">(</span>code <span style="color:#ae81ff">23</span><span style="color:#f92672">)</span> at main.c<span style="color:#f92672">(</span><span style="color:#ae81ff">702</span><span style="color:#f92672">)</span></code></pre></div>
+<p>解决方法: rsync的source有些文件没有读权限，所以报错。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">chmod +r  ./* -R</code></pre></div>
+<p>再次同步，即可OK.</p>
+
+<h1 id="相关链接">相关链接</h1>
+
+<p><a href="http://www.jianshu.com/p/05289a4bc8b2">如何搭建一个独立博客——简明Github Pages与Hexo教程</a></p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="http://xuzhibin.com/tags/hexo" rel="tag" title="hexo">#hexo#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://xuzhibin.com/development/" rel="next" title="Development">
+        <i class="fa fa-chevron-left"></i> Development
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://xuzhibin.com/post/npm-summary/" rel="prev" title="npm小结">
+        npm小结 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://xuzhibin.com/images/avatar.png"
+        alt="jabin" />
+    <p class="site-author-name" itemprop="name">jabin</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://xuzhibin.com/post/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://xuzhibin.com/categories/">      
+         
+        <span class="site-state-item-count">12</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://xuzhibin.com/tags/">
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="" target="_blank" title="">
+            <i class="fa fa-fw fa-"></i>
+            
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="" target="_blank" title="">
+            <i class="fa fa-fw fa-"></i>
+            
+        </a>
+        </span>
+    
+</div>
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2008 - 2019</span>
+  <span class="with-love"><i class="fa fa-user"></i></span>
+  <span class="author" itemprop="copyrightHolder">狂人居</span>
+</div>
+
+
+
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.1</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+<div class="theme-info">
+| <a href="http://www.miitbeian.gov.cn/">粤ICP备17022455号-1</a> | <a href="http://www.miitbeian.gov.cn/">粤ICP备17022455号-2</a> 
+</div>
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://xuzhibin.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://xuzhibin.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/utils.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/motion.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/affix.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/search.js"></script>
+
+<script src="http://xuzhibin.com/js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

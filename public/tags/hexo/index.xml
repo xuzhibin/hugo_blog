@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hexo on 狂人居</title>
+    <link>http://xuzhibin.com/tags/hexo/</link>
+    <description>Recent content in hexo on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 01 Jun 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/hexo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在Coding部署Hexo</title>
+      <link>http://xuzhibin.com/post/2016/hexo-coding/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2016/hexo-coding/</guid>
+      <description>网上的Hexo教程大多是部署在Github，在实际的使用中，Github速度比较满，有时更新还会抽风一下，于是想在国内找个替代方案。 目前来说</description>
+    </item>
+    
+    <item>
+      <title>Hexo安装记</title>
+      <link>http://xuzhibin.com/post/2016/hexo-install/</link>
+      <pubDate>Mon, 30 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2016/hexo-install/</guid>
+      <description>Hexo是啥 Hexo 是由 Node.js 驱动的一款快速、简单且功能强大的博客框架。可以快速将 Markdown 格式的文档生成静态页面。是越来越笨重的 Wordpress 和麻烦的空间管理的替代方案</description>
+    </item>
+    
+  </channel>
+</rss>

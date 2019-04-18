@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>.net on 狂人居</title>
+    <link>http://xuzhibin.com/categories/.net/</link>
+    <description>Recent content in .net on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 13 Jun 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/categories/.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lucene.Net入门基础</title>
+      <link>http://xuzhibin.com/post/2010/lucenenet-getstart/</link>
+      <pubDate>Sun, 13 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2010/lucenenet-getstart/</guid>
+      <description>简单的例子 //索引 Private void Index() { IndexWriter writer = new IndexWriter(@&amp;#34;E:\Index&amp;#34;, new StandardAnalyzer()); Document doc = new Document(); doc.Add(new Field(&amp;#34;Text&amp;#34;,&amp;#34;哦耶,美丽的姑娘。&amp;#34;, Field.Store.YES, Field.Index.TOKENIZED)); writer.AddDocument(doc);</description>
+    </item>
+    
+    <item>
+      <title>.Net下开发Windows Service</title>
+      <link>http://xuzhibin.com/post/2010/net-winservice/</link>
+      <pubDate>Sun, 28 Feb 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2010/net-winservice/</guid>
+      <description>Windows服务能做些什么？ Windows服务是这些后台程序、后台服务的正规名词。Windows服务的运行可以在没有用户干预的情况下，在后</description>
+    </item>
+    
+    <item>
+      <title>NVelocity直接使用字符串模板</title>
+      <link>http://xuzhibin.com/post/2009/nvelocity-demo/</link>
+      <pubDate>Sat, 18 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2009/nvelocity-demo/</guid>
+      <description>using System; using System.IO; using System.Collections; using System.Collections.Generic; using NVelocity; using NVelocity.App; namespace ConsoleApplication1 { class Program { static void Main(string[] args) { string templates = &amp;#34;Hi $name $surname, The date is $date.&amp;#34;; Dictionary oo = new Dictionary(); oo.Add(&amp;#34;name&amp;#34;, &amp;#34;Joe&amp;#34;); oo.Add(&amp;#34;surname&amp;#34;, &amp;#34;Smith&amp;#34;); oo.Add(&amp;#34;date&amp;#34;, DateTime.Now.ToString(&amp;#34;D&amp;#34;)); Console.WriteLine(Fill(templates,oo)); Console.ReadLine(); } static public string Fill(string template, IDictionary values) { var engine = new VelocityEngine(); engine.Init(); var context = new VelocityContext(); if (values != null)</description>
+    </item>
+    
+  </channel>
+</rss>

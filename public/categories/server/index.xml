@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>server on 狂人居</title>
+    <link>http://xuzhibin.com/categories/server/</link>
+    <description>Recent content in server on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 15 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/categories/server/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>gogs开启ssh支持</title>
+      <link>http://xuzhibin.com/post/2018/gogs-ssh/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2018/gogs-ssh/</guid>
+      <description>&lt;p&gt;已经通过docker安装了gogs，http能正常使用，ssh不能使用&lt;/p&gt;
+
+&lt;h1 id=&#34;gogs配置app-ini&#34;&gt;gogs配置app.ini&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;[server]&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;DOMAIN&lt;/span&gt;           &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;xxx&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;HTTP_PORT&lt;/span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;3000&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;ROOT_URL&lt;/span&gt;         &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;http://xxx:13000/&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;DISABLE_SSH&lt;/span&gt;      &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;false&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;SSH_DOMAIN&lt;/span&gt;       &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;xxx:10022&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;SSH_PORT&lt;/span&gt;         &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;22&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;START_SSH_SERVER&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;false&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;SSH_LISTEN_PORT&lt;/span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;10033&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;SSH_ROOT_PATH&lt;/span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;/home/git/.ssh&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;OFFLINE_MODE&lt;/span&gt;     &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;false&lt;/span&gt;
+&lt;span style=&#34;color:#a6e22e&#34;&gt;REWRITE_AUTHORIZED_KEYS_AT_START&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux下重置MySQL root密码</title>
+      <link>http://xuzhibin.com/post/2013/reset-mysql-rootpass/</link>
+      <pubDate>Sat, 17 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2013/reset-mysql-rootpass/</guid>
+      <description>1、停止MySQL服务 执行： /etc/init.d/mysql stop 你的机器上也不一定是/etc/init.d/mysql，也可能是/etc/init.d/mysqld 2、跳过</description>
+    </item>
+    
+    <item>
+      <title>VPS硬盘被撑满</title>
+      <link>http://xuzhibin.com/post/2013/vps-harddisk-full/</link>
+      <pubDate>Fri, 12 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2013/vps-harddisk-full/</guid>
+      <description>早上打开博客，发现显示“无法连上数据库”，遂登录ssh，重启服务。重启后，Wordpress可以访问了，但是标签及分类目录全部丢失。一阵Go</description>
+    </item>
+    
+    <item>
+      <title>ElasticSearch入门笔记</title>
+      <link>http://xuzhibin.com/post/2012/elasticsearch-getstart/</link>
+      <pubDate>Thu, 06 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2012/elasticsearch-getstart/</guid>
+      <description>ElasticSearch 是构建在Apache Lucene之上的的搜索引擎服务，开源（Apache2协议），分布式，RESTful。安装方便，使用简单。 官方站点：h</description>
+    </item>
+    
+    <item>
+      <title>安装Tornado</title>
+      <link>http://xuzhibin.com/post/2012/install-tornado/</link>
+      <pubDate>Sat, 12 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2012/install-tornado/</guid>
+      <description>安装Tornado wget https://github.com/downloads/facebook/tornado/tornado-2.2.1.tar.gz tar xvzf tornado-2.2.1.tar.gz cd tornado-2.2.1 python setup.py build python setup.py install 到此，tornado已安装完成。 开启服务，运行hello world程序 cd tornado-2.2.1 ./demos/helloworld/helloworld.py 此时打开浏览器，地址</description>
+    </item>
+    
+    <item>
+      <title>mongodb常用命令</title>
+      <link>http://xuzhibin.com/post/2012/mongodb-command/</link>
+      <pubDate>Tue, 10 Apr 2012 04:24:17 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2012/mongodb-command/</guid>
+      <description>超级用户相关 #进入数据库admin use admin #增加或修改用户密码 db.addUser(&amp;#39;name&amp;#39;,&amp;#39;pwd&amp;#39;) #查看用户列表 db.system.users.find() #用户认证 db.auth(&amp;#39;name&amp;#39;,&amp;#39;pwd&amp;#39;) #删除用户 db.removeUser(&amp;#39;name&amp;#39;) #查看所有用户 show users #查看所有数据库 show dbs #</description>
+    </item>
+    
+    <item>
+      <title>CentOS安装crontab及使用方法</title>
+      <link>http://xuzhibin.com/post/2010/install-crontab/</link>
+      <pubDate>Sat, 05 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2010/install-crontab/</guid>
+      <description>安装crontab: [root@CentOS ~] yum install vixie-cron [root@CentOS ~] yum install crontabs 说明： vixie-cron软件包是cron的主程序； crontabs软件包是用来安装、卸装、或列举用</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>群晖 on 狂人居</title>
+    <link>http://xuzhibin.com/tags/%E7%BE%A4%E6%99%96/</link>
+    <description>Recent content in 群晖 on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 22 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/%E7%BE%A4%E6%99%96/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>家庭数据中心</title>
+      <link>http://xuzhibin.com/post/2018/nas-home/</link>
+      <pubDate>Sun, 22 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2018/nas-home/</guid>
+      <description>&lt;p&gt;私人数据越来越多（如照片），网盘越来越小，并且不是关闭就是被墙。决定搭建自己的家庭数据中心。
+&lt;img src=&#34;http://blog-img.xuzhibin.com/2018-11-28-080111.jpg&#34; alt=&#34;WechatIMG156&#34; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;计划-预算&#34;&gt;计划&amp;amp;预算&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;硬件：群晖218+（加一条8g内存），希捷酷狼4T*2，玩客云，希捷移动硬盘2T（玩客云用），4T（群晖用）各一个，小米盒子国际版，斐讯k2p路由器（刷官改rom）&lt;/li&gt;
+&lt;li&gt;预算：8k&lt;/li&gt;
+&lt;li&gt;目的：数据备份，家庭影视
+其实黑群也可以，价格更便宜。最好4盘位，2盘位还是少了点。&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

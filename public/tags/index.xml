@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 狂人居</title>
+    <link>http://xuzhibin.com/tags/</link>
+    <description>Recent content in Tags on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 16 Apr 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hugo</title>
+      <link>http://xuzhibin.com/tags/hugo/</link>
+      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>electron</title>
+      <link>http://xuzhibin.com/tags/electron/</link>
+      <pubDate>Thu, 29 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/electron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>react</title>
+      <link>http://xuzhibin.com/tags/react/</link>
+      <pubDate>Thu, 29 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/react/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gogs</title>
+      <link>http://xuzhibin.com/tags/gogs/</link>
+      <pubDate>Wed, 15 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/gogs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pyside</title>
+      <link>http://xuzhibin.com/tags/pyside/</link>
+      <pubDate>Wed, 08 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/pyside/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>群晖</title>
+      <link>http://xuzhibin.com/tags/%E7%BE%A4%E6%99%96/</link>
+      <pubDate>Sun, 22 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/%E7%BE%A4%E6%99%96/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hexo</title>
+      <link>http://xuzhibin.com/tags/hexo/</link>
+      <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/hexo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>开发</title>
+      <link>http://xuzhibin.com/tags/%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Mon, 30 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>npm</title>
+      <link>http://xuzhibin.com/tags/npm/</link>
+      <pubDate>Sun, 29 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/npm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>http://xuzhibin.com/tags/git/</link>
+      <pubDate>Thu, 07 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>http://xuzhibin.com/tags/mysql/</link>
+      <pubDate>Sat, 17 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vps</title>
+      <link>http://xuzhibin.com/tags/vps/</link>
+      <pubDate>Fri, 12 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/vps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>w3tc</title>
+      <link>http://xuzhibin.com/tags/w3tc/</link>
+      <pubDate>Fri, 12 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/w3tc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android</title>
+      <link>http://xuzhibin.com/tags/android/</link>
+      <pubDate>Thu, 21 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>socket</title>
+      <link>http://xuzhibin.com/tags/socket/</link>
+      <pubDate>Wed, 12 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/socket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elasticsearch</title>
+      <link>http://xuzhibin.com/tags/elasticsearch/</link>
+      <pubDate>Thu, 06 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/elasticsearch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tornado</title>
+      <link>http://xuzhibin.com/tags/tornado/</link>
+      <pubDate>Sat, 12 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/tornado/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mongodb</title>
+      <link>http://xuzhibin.com/tags/mongodb/</link>
+      <pubDate>Tue, 10 Apr 2012 04:24:17 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/mongodb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webapp</title>
+      <link>http://xuzhibin.com/tags/webapp/</link>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/webapp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>http://xuzhibin.com/tags/javascript/</link>
+      <pubDate>Tue, 08 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html5</title>
+      <link>http://xuzhibin.com/tags/html5/</link>
+      <pubDate>Thu, 03 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/html5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iptables</title>
+      <link>http://xuzhibin.com/tags/iptables/</link>
+      <pubDate>Wed, 18 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/iptables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>text extraction</title>
+      <link>http://xuzhibin.com/tags/text-extraction/</link>
+      <pubDate>Thu, 11 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/text-extraction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>正文抽取</title>
+      <link>http://xuzhibin.com/tags/%E6%AD%A3%E6%96%87%E6%8A%BD%E5%8F%96/</link>
+      <pubDate>Thu, 11 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/%E6%AD%A3%E6%96%87%E6%8A%BD%E5%8F%96/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>正文提取</title>
+      <link>http://xuzhibin.com/tags/%E6%AD%A3%E6%96%87%E6%8F%90%E5%8F%96/</link>
+      <pubDate>Thu, 11 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/%E6%AD%A3%E6%96%87%E6%8F%90%E5%8F%96/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lucene</title>
+      <link>http://xuzhibin.com/tags/lucene/</link>
+      <pubDate>Sun, 13 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/lucene/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>crontab</title>
+      <link>http://xuzhibin.com/tags/crontab/</link>
+      <pubDate>Sat, 05 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/crontab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>service</title>
+      <link>http://xuzhibin.com/tags/service/</link>
+      <pubDate>Sun, 28 Feb 2010 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/service/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>架构</title>
+      <link>http://xuzhibin.com/tags/%E6%9E%B6%E6%9E%84/</link>
+      <pubDate>Wed, 16 Dec 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/%E6%9E%B6%E6%9E%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nvelocity</title>
+      <link>http://xuzhibin.com/tags/nvelocity/</link>
+      <pubDate>Sat, 18 Apr 2009 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/nvelocity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>广告</title>
+      <link>http://xuzhibin.com/tags/%E5%B9%BF%E5%91%8A/</link>
+      <pubDate>Wed, 15 Oct 2008 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/tags/%E5%B9%BF%E5%91%8A/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

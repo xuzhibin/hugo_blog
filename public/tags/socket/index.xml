@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>socket on 狂人居</title>
+    <link>http://xuzhibin.com/tags/socket/</link>
+    <description>Recent content in socket on 狂人居</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 12 Dec 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://xuzhibin.com/tags/socket/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Go Socket例子</title>
+      <link>http://xuzhibin.com/post/2012/go-socket/</link>
+      <pubDate>Wed, 12 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://xuzhibin.com/post/2012/go-socket/</guid>
+      <description>Tcp Server (tcpserver.go) package main import ( &amp;#34;fmt&amp;#34; &amp;#34;net&amp;#34; &amp;#34;os&amp;#34; &amp;#34;time&amp;#34; ) func main() { service := &amp;#34;:1200&amp;#34; tcpAddr, err := net.ResolveTCPAddr(&amp;#34;tcp4&amp;#34;, service) checkError(err) listener, err := net.ListenTCP(&amp;#34;tcp&amp;#34;, tcpAddr) checkError(err) for { conn, err := listener.Accept() if err != nil { continue } go handleClient(conn) } } func handleClient(conn net.Conn) { defer conn.Close() daytime := time.Now().String() fmt.Fprintf(os.Stderr,&amp;#34;connect time:%s,client ip:%s\r\n&amp;#34;,daytime,conn.RemoteAddr().String()) _,err := conn.Write([]byte(daytime)) // don&amp;#39;t care about return value checkError(err) fmt.Fprintf(os.Stderr,&amp;#34;send</description>
+    </item>
+    
+  </channel>
+</rss>

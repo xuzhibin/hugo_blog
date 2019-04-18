@@ -1,0 +1,437 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>Git 常用命令速查表 - 狂人居</title>
+    <meta name="keywords" content="博客,程序员,架构师,个人,思考,读书,笔记,技术,分享,PHP">
+    
+    <meta property="og:title" content="Git 常用命令速查表">
+    <meta property="og:site_name" content="狂人居">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="Git 常用命令速查表 - 狂人居" />
+    <meta name="description" content="博客 | 软件 | 架构 | PHP | Python"> 
+    
+    <link rel="shortcut icon" href="http://xuzhibin.com/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://xuzhibin.com/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="http://xuzhibin.com/img/apple-touch-icon.png" />
+    <link href="http://xuzhibin.com/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://xuzhibin.com/css/syntax.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="http://xuzhibin.com/js/highlight/styles/a11y-dark.css">
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="http://xuzhibin.com/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">狂人居</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">路漫漫其修远兮,吾将上下而求索</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/categories/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/post/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/tags/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/development/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-star"></i> <br />开发
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="http://xuzhibin.com/resume/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-thumbs-up"></i> <br />Resume
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="http://xuzhibin.com/post/2013/git-command/" itemprop="url">
+        Git 常用命令速查表
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2013-11-07">
+    2013-11-07
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="http://xuzhibin.com/categories/tools" itemprop="url" rel="index">
+        <span itemprop="name">tools</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1320 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    
+
+<h1 id="配置">配置</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git config --global user.name <span style="color:#e6db74">&#34;John Doe&#34;</span>
+$ git config --global user.email johndoe@example.com</code></pre></div>
+<h1 id="创建版本库">创建版本库</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git clone <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span> <span style="color:#75715e">#克隆远程版本库</span>
+$ git clone git://github.com/schacon/grit.git
+$ git clone git://github.com/schacon/grit.git mygrit
+$ git clone --bare my_project my_project.git <span style="color:#75715e">#创建纯仓库</span>
+$ git init <span style="color:#75715e">#初始化本地版本库</span>
+$ git init --bare <span style="color:#75715e">#创建纯仓库</span></code></pre></div>
+<h1 id="修改和提交">修改和提交</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git status <span style="color:#75715e">#查看状态</span>
+$ git diff <span style="color:#75715e">#查看变更内容</span>
+$ git diff --cached <span style="color:#75715e">#查看已经暂存起来的文件和上次提交时的快照之间的差异</span>
+$ git diff master...contrib <span style="color:#75715e">#特性分支contrib和它同master分支的共同祖先之间的差异（合并时实际将要引入的新代码）</span>
+$ git add . <span style="color:#75715e">#跟踪所有改动过的文件</span>
+$ git add <span style="color:#f92672">[</span>file<span style="color:#f92672">]</span> <span style="color:#75715e">#跟踪指定的文件</span>
+$ git mv <span style="color:#f92672">[</span>old<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>new<span style="color:#f92672">]</span> <span style="color:#75715e">#文件改名</span>
+$ git rm <span style="color:#f92672">[</span>file<span style="color:#f92672">]</span> <span style="color:#75715e">#删除文件</span>
+$ git rm --cached <span style="color:#f92672">[</span>file<span style="color:#f92672">]</span> <span style="color:#75715e">#停止跟踪文件但不删除</span>
+$ git commit -m <span style="color:#e6db74">&#34;commit message&#34;</span> <span style="color:#75715e">#提交所有更新过的文件</span>
+$ git commit --amend <span style="color:#75715e">#修改最后一次提交</span>
+$ git commit -a -m <span style="color:#e6db74">&#39;added new benchmarks&#39;</span> <span style="color:#75715e">#跳过暂存区域直接提交</span></code></pre></div>
+<h1 id="查看提交历史">查看提交历史</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git log <span style="color:#75715e">#查看提交历史</span>
+$ git log --pretty<span style="color:#f92672">=</span>oneline
+$ git log -p <span style="color:#f92672">[</span>file<span style="color:#f92672">]</span> <span style="color:#75715e">#查看指定文件的提交历史</span>
+$ git log master..experiemnt <span style="color:#75715e">#所有可从experiment分支中获得而不能从master分支中获得的提交</span>
+$ git blame <span style="color:#f92672">[</span>file<span style="color:#f92672">]</span> <span style="color:#75715e">#以列表方式查看指定文件的提交历史</span>
+$ git log origin/featureA ^featureA <span style="color:#75715e">#比较origin/featureA及featureA分支，查看origin/featureA更新了哪些内容</span></code></pre></div>
+<h1 id="撤消">撤消</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git reset --hard HEAD <span style="color:#75715e">#撤消工作目录中所有未提交文件的修改内容</span>
+$ git reset --hard <span style="color:#f92672">[</span>commit<span style="color:#f92672">]</span> <span style="color:#75715e">#会退到某个[commit]</span>
+$ git reset HEAD <span style="color:#f92672">[</span>file<span style="color:#f92672">]</span> <span style="color:#75715e">#取消已经暂存的文件</span>
+$ git checkout HEAD <span style="color:#f92672">[</span>file<span style="color:#f92672">]</span> <span style="color:#75715e">#撤消指定的未提交文件的修改内容[已暂存]</span>
+$ git checkout -- benchmarks.rb <span style="color:#75715e">#取消对文件的修改[未暂存]</span>
+$ git revert <span style="color:#f92672">[</span>commit<span style="color:#f92672">]</span> <span style="color:#75715e">#撤消指定的提交</span></code></pre></div>
+<h1 id="分支与标签">分支与标签</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch <span style="color:#75715e">#显示所有本地分支</span>
+$ git checkout <span style="color:#f92672">[</span>branch/tag<span style="color:#f92672">]</span> <span style="color:#75715e">#切换到指定分支或标签</span>
+$ git checkout -b featureB origin/master <span style="color:#75715e">#从分支origin/master克隆并创建分支featureB，切换至featureB</span>
+$ git branch <span style="color:#f92672">[</span>new-branch<span style="color:#f92672">]</span> <span style="color:#75715e">#创建新分支</span>
+$ git branch sc/ruby_client master <span style="color:#75715e">#从master分支克隆一个sc/ruby_client分支</span>
+$ git branch -d <span style="color:#f92672">[</span>branch<span style="color:#f92672">]</span> <span style="color:#75715e">#删除本地分支</span>
+$ git branch --merged <span style="color:#75715e">#查看哪些分支已被并入当前分支</span>
+$ git branch --no-merged <span style="color:#75715e">#查看哪些分支未被并入当前分支</span>
+$ git tag <span style="color:#75715e">#列出所有本地标签</span>
+$ git tag <span style="color:#f92672">[</span>tagname<span style="color:#f92672">]</span> <span style="color:#75715e">#基于最新提交创建标签</span>
+$ git tag -d <span style="color:#f92672">[</span>tagname<span style="color:#f92672">]</span> <span style="color:#75715e">#删除标签</span></code></pre></div>
+<h1 id="合并与衍合">合并与衍合</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git merge <span style="color:#f92672">[</span>branch<span style="color:#f92672">]</span> <span style="color:#75715e">#合并指定分支到当前分支</span>
+$ git rebase <span style="color:#f92672">[</span>branch<span style="color:#f92672">]</span> <span style="color:#75715e">#衍合指定分支到当前分支</span></code></pre></div>
+<h1 id="远程操作">远程操作</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git remote -v <span style="color:#75715e">#查看远程版本库信息</span>
+$ git remote show <span style="color:#f92672">[</span>remote<span style="color:#f92672">]</span> <span style="color:#75715e">#查看指定远程版本库信息</span>
+$ git remote add <span style="color:#f92672">[</span>remote<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span> <span style="color:#75715e">#添加远程版本库</span>
+$ git remote  rename <span style="color:#f92672">[</span>old-remote-name<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>new-remote-name<span style="color:#f92672">]</span>  <span style="color:#75715e">#远程仓库的重命名</span>
+$ git remote rm <span style="color:#f92672">[</span>remote<span style="color:#f92672">]</span>   <span style="color:#75715e">#远程仓库的删除</span>
+$ git fetch <span style="color:#f92672">[</span>remote<span style="color:#f92672">]</span> <span style="color:#75715e">#从远程库获取代码</span>
+$ git pull <span style="color:#f92672">[</span>remote<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>branch<span style="color:#f92672">]</span> <span style="color:#75715e">#下载代码及快速合并至当前分支</span>
+$ git push <span style="color:#f92672">[</span>remote<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>branch<span style="color:#f92672">]</span> <span style="color:#75715e">#上传代码及快速合并</span>
+$ git push origin featureB<span style="color:#f92672">[</span>本地分支<span style="color:#f92672">]</span>:featureBee<span style="color:#f92672">[</span>远程分支<span style="color:#f92672">]</span> <span style="color:#75715e">#推送本地分支至指定的远程分支</span>
+$ git push <span style="color:#f92672">[</span>remote<span style="color:#f92672">]</span> :<span style="color:#f92672">[</span>branch/tag-name<span style="color:#f92672">]</span> <span style="color:#75715e">#删除远程分支或标签</span>
+$ git push --tags <span style="color:#75715e">#上传所有标签</span></code></pre></div>
+<h1 id="其他">其他</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git describe master <span style="color:#75715e">#生成内部版本号</span>
+$ git archive master --prefix<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;project/&#39;</span> | gzip &gt; <span style="color:#e6db74">&#39;git describe master&#39;</span>.tar.gz <span style="color:#75715e">#打包成tar</span>
+$ git archive master --prefix<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;project/&#39;</span> --format<span style="color:#f92672">=</span>zip &gt; <span style="color:#e6db74">&#39;git describe master&#39;</span>.zip <span style="color:#75715e">#打包成zip</span>
+$ git stash <span style="color:#75715e">#储藏</span>
+$ git stash list <span style="color:#75715e">#查看储藏列表</span>
+$ git stash apply stash@2 <span style="color:#75715e">#应用名为stash@2 的储藏。如果你不指明，Git 默认使用最近的储藏并尝试应用它</span>
+$ git stash drop stash@<span style="color:#f92672">{</span><span style="color:#ae81ff">0</span><span style="color:#f92672">}</span> <span style="color:#75715e">#移除名为stash@{0}的储藏</span>
+$ git blame -L <span style="color:#ae81ff">12</span>,22 simplegit.rb <span style="color:#75715e">#文件标注</span></code></pre></div>
+<h1 id="git文件">Git文件</h1>
+
+<p>.gitattributes #属性文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">.doc diff<span style="color:#f92672">=</span>word
+database.xml merge<span style="color:#f92672">=</span>ours</code></pre></div>
+<p>.gitignore #忽略某些文件</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># 此为注释– 将被Git忽略</span>
+*.<span style="color:#f92672">[</span>oa<span style="color:#f92672">]</span> <span style="color:#75715e"># 忽略所有.o或.a结尾的文件</span>
+!lib.a <span style="color:#75715e"># 但lib.a 除外</span>
+/TODO <span style="color:#75715e"># 仅仅忽略项目根目录下的TODO文件，不包括subdir/TODO</span>
+build/ <span style="color:#75715e"># 忽略build/目录下的所有文件</span>
+doc/*.txt <span style="color:#75715e"># 会忽略doc/notes.txt但不包括doc/server/arch.txt</span></code></pre></div>
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="http://xuzhibin.com/tags/git" rel="tag" title="git">#git#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="http://xuzhibin.com/post/2016/npm-summary/" rel="next" title="npm小结">
+        <i class="fa fa-chevron-left"></i> npm小结
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="http://xuzhibin.com/post/2013/reset-mysql-rootpass/" rel="prev" title="Linux下重置MySQL root密码">
+        Linux下重置MySQL root密码 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="http://xuzhibin.com/images/avatar.png"
+        alt="jabin" />
+    <p class="site-author-name" itemprop="name">jabin</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="http://xuzhibin.com/post/">
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="http://xuzhibin.com/categories/">      
+         
+        <span class="site-state-item-count">12</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="http://xuzhibin.com/tags/">
+         
+        <span class="site-state-item-count">31</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="" target="_blank" title="">
+            <i class="fa fa-fw fa-"></i>
+            
+        </a>
+        </span>
+    
+        <span class="links-of-author-item">
+        <a href="" target="_blank" title="">
+            <i class="fa fa-fw fa-"></i>
+            
+        </a>
+        </span>
+    
+</div>
+
+      
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2008 - 2019</span>
+  <span class="with-love"><i class="fa fa-user"></i></span>
+  <span class="author" itemprop="copyrightHolder">狂人居</span>
+</div>
+
+
+
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.55.1</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+<div class="theme-info">
+| <a href="http://www.miitbeian.gov.cn/">粤ICP备17022455号-1</a> | <a href="http://www.miitbeian.gov.cn/">粤ICP备17022455号-2</a> 
+</div>
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="http://xuzhibin.com/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="http://xuzhibin.com/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/utils.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/motion.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/affix.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/scrollspy.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/post-details.js"></script>
+<script type="text/javascript" src="http://xuzhibin.com/js/toc.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="http://xuzhibin.com/js/search.js"></script>
+
+<script src="http://xuzhibin.com/js/highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
